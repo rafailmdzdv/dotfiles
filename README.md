@@ -1,0 +1,15 @@
+## My personal dot***REMOVED***les
+
+### Stack:
+
+- Neovim
+- Kitty
+- Tmux
+- Hyprland (hyprdots)
+
+### Install
+
+```shell
+$ git clone git@github.com:rafailmdzdv/dot***REMOVED***les ~/.dot***REMOVED***les && cd ~/.dot***REMOVED***les
+$ ls -l | grep -Po '(kitty|nvim)' | xargs -I{} ln -s ~/.dot***REMOVED***les/{} ~/.con***REMOVED***g
+```
