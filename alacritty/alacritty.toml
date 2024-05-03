@@ -6,7 +6,11 @@ import = [
 
 [cursor.style]
 blinking = "On"
-shape = "Block"
+shape = "Beam"
+
+[cursor.vi_mode_style]
+blinking = "On"
+shape = "Beam"
 
 [env]
 TERM = "xterm-256color"
