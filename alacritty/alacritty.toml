@@ -1,0 +1,38 @@
+live_con***REMOVED***g_reload = true
+
+import = [
+  "~/.dot***REMOVED***les/alacritty/colorschemes/tokyo-night.toml"
+]
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 10
+
+[font.bold]
+family = "Hack Nerd Font"
+style = "auto"
+
+[font.bold_italic]
+family = "Hack Nerd Font"
+style = "auto"
+
+[font.italic]
+family = "Hack Nerd Font"
+style = "auto"
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[window]
+dynamic_padding = true
+
+[window.padding]
+x = 5
+y = 5
