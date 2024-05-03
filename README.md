@@ -10,6 +10,6 @@
 ### Install
 
 ```shell
-$ git clone git@github.com:rafailmdzdv/dot***REMOVED***les ~/.dot***REMOVED***les && cd ~/.dot***REMOVED***les
+$ git clone https://github.com/rafailmdzdv/dot***REMOVED***les.git ~/.dot***REMOVED***les && cd ~/.dot***REMOVED***les
 $ ls -l | grep -Po '(kitty|nvim)' | xargs -I{} ln -s ~/.dot***REMOVED***les/{} ~/.con***REMOVED***g
 ```
