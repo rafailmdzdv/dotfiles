@@ -1,3 +1,5 @@
 lazyvim.json
 lazy-lock.json
 stylua.toml
+
+.neoconf.json
