@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/rafail/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["auto-save.nvim"] = {
+    loaded = true,
+    path = "/home/rafail/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
+    url = "https://github.com/pocco81/auto-save.nvim"
+  },
   ["ayu-vim"] = {
     loaded = true,
     path = "/home/rafail/.local/share/nvim/site/pack/packer/start/ayu-vim",
@@ -188,11 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rafail/.local/share/nvim/site/pack/packer/start/transparent.nvim",
     url = "https://github.com/xiyaowong/transparent.nvim"
-  },
-  ["venv-selector.nvim"] = {
-    loaded = true,
-    path = "/home/rafail/.local/share/nvim/site/pack/packer/start/venv-selector.nvim",
-    url = "https://github.com/linux-cultist/venv-selector.nvim"
   },
   ["vim-wakatime"] = {
     loaded = true,

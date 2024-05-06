@@ -26,6 +26,7 @@ return require("packer").startup(function(use)
   use "windwp/nvim-autopairs"
 
   -- Nvim
+  use "pocco81/auto-save.nvim"
   use "nvim-tree/nvim-web-devicons"
   use "numToStr/Comment.nvim"
   use "nvim-lualine/lualine.nvim"
