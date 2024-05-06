@@ -1,11 +1,5 @@
 ## My personal dot***REMOVED***les
 
-### Pictures
-#### Neovim
-![Neovim](./assets/nvim.png)
-#### Tmux powerline
-![Tmux Powerline](./assets/tmux_powerline.png)
-
 ### Stack:
 
 - Neovim
