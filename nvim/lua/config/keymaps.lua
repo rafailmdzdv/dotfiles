@@ -15,7 +15,7 @@ map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- Buffer
-map("n", "cb", "<cmd>bd<CR>", opts)
+map("n", "<leader>q", "<cmd>bd<CR>", opts)
 
 -- Neotree
 map("n", "<S-e>", "<cmd>NvimTreeToggle<CR>", opts)
