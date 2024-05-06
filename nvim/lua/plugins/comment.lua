@@ -1,6 +1,8 @@
 require("Comment").setup({
+  toggler = {
+    line = "<leader>/"
+  },
   opleader = {
-    line = " /",
-    block = " /"
+    block = "<leader>/"
   }
 })
