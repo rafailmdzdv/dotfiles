@@ -1,7 +1,7 @@
-live_con***REMOVED***g_reload = true
+live_config_reload = true
 
 import = [
-  "~/.dot***REMOVED***les/alacritty/colorschemes/tokyo-night.toml"
+  "~/.dotfiles/alacritty/colorschemes/tokyo-night.toml"
 ]
 
 [cursor.style]

@@ -13,9 +13,9 @@ cmp.setup({
     ["<C-e>"] = cmp.mapping.abort(),
     ["<tab>"] = cmp.mapping.select_next_item(),
     ["<s-tab>"] = cmp.mapping.select_prev_item(),
-    ["<enter>"] = cmp.mapping.con***REMOVED***rm({ select = true }),
+    ["<enter>"] = cmp.mapping.confirm({ select = true }),
   }),
-  sources = cmp.con***REMOVED***g.sources({
+  sources = cmp.config.sources({
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "nvim_lua" },

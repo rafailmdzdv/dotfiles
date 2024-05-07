@@ -1,14 +1,14 @@
-local lspcon***REMOVED***g = require("lspcon***REMOVED***g")
+local lspconfig = require("lspconfig")
 
 local opts = { noremap = true, silent = true }
 local on_attach = function()
     vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-    vim.keymap.set("n", "gd", "<cmd>Telescope lsp_de***REMOVED***nitions<CR>", opts)
+    vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
     vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
     vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
     vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
     vim.keymap.set("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-    vim.keymap.set("n", "<leader>D", "<cmd>Telescope lsp_type_de***REMOVED***nitions<CR>", opts)
+    vim.keymap.set("n", "<leader>D", "<cmd>Telescope lsp_type_definitions<CR>", opts)
     vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
     vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
     vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", opts)
@@ -22,14 +22,14 @@ local lspcmp = require("cmp_nvim_lsp")
 local capabilities = lspcmp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 for _, server in ipairs(servers) do
-  lspcon***REMOVED***g[server].setup({
+  lspconfig[server].setup({
     capabilities = capabilities,
     on_attach = on_attach,
   })
 end
 
 -- Lua
-lspcon***REMOVED***g.lua_ls.setup({
+lspconfig.lua_ls.setup({
   capabilities = capabilities,
   on_attach = on_attach,
   settings = {
@@ -41,12 +41,12 @@ lspcon***REMOVED***g.lua_ls.setup({
 })
 
 -- Frontend
-lspcon***REMOVED***g.html.setup({
+lspconfig.html.setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
 
-lspcon***REMOVED***g.emmet_ls.setup({
+lspconfig.emmet_ls.setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })

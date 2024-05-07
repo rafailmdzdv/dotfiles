@@ -18,4 +18,4 @@ vim.opt.autoread = true
 
 vim.opt.ignorecase = false
 
-vim.o.swap***REMOVED***le = false
+vim.o.swapfile = false

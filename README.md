@@ -1,20 +1,29 @@
-## My personal dot***REMOVED***les
+# My personal dotfiles
 
-### Stack:
+## Stack:
 
 - Neovim
 - Alacritty
-- Kitty
 - Tmux
-- Hyprland (hyprdots)
+- bspwm
 
-### Install
+## Install
 
 ```shell
-$ git clone https://github.com/rafailmdzdv/dot***REMOVED***les.git ~/.dot***REMOVED***les && cd ~/.dot***REMOVED***les
-$ ls -l | grep -Po '(kitty|nvim|alacritty)' | xargs -I{} ln -s ~/.dot***REMOVED***les/{} ~/.con***REMOVED***g
-$ ln -s ~/.dot***REMOVED***les/zsh/.zshrc ~/.zshrc
-$ ln -s ~/.dot***REMOVED***les/tmux/.tmux.conf ~/.tmux.conf
+$ git clone https://github.com/rafailmdzdv/dotfiles.git ~/.dotfiles && cd ~/.dotfiles
+$ ln -s ~/.dotfiles/{bspwm,sxhkd,polybar,nvim,alacritty} ~/.config
+$ ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
+$ ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 
-##### Install [TPM](https://github.com/tmux-plugins/tpm) for tmux.
+### Tmux
+Install [TPM](https://github.com/tmux-plugins/tpm) for tmux.
+
+### Vim
+Install [packer](https://github.com/wbthomason/packer.nvim) and then:
+```shell
+$ nvim ~/.dotfiles/nvim/init.lua
+```
+`:so%`
+and then:
+`:PackerSync`
