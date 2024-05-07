@@ -1,0 +1,35 @@
+#!/bin/sh
+
+rootdir=$(dirname $(dirname $(realpath $0)))
+currentdir=$(dirname $(realpath $0))
+
+echo Installing dependencies
+sudo pacman -S $(cat $currentdir/packages.list)
+
+cat << EOF > ~/.xinitrc
+    polybar -r &
+    sxhkd &
+    exec bspwm
+EOF
+
+apps=(alacritty nvim polybar bspwm sxhkd)
+
+if [ ! -d ~/.config ]; then
+    mkdir ~/.config
+fi
+echo Copying files into ~/.config
+for app in "${apps[@]}"; do
+    echo $app
+    cp -r $rootdir/$app ~/.config/
+done
+
+# Zsh
+echo Setting up ZSH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cp $rootdir/zsh/.zshrc ~/.zshrc
+
+# TPM
+echo Setting up Tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+cp $rootdir/tmux/.tmux.conf ~/.tmux.conf
+tmux source ~/.tmux.conf
