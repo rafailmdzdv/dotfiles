@@ -13,25 +13,25 @@ _G._packer = _G._packer or {}
 _G._packer.inside_compile = true
 
 local time
-local pro***REMOVED***le_info
-local should_pro***REMOVED***le = false
-if should_pro***REMOVED***le then
+local profile_info
+local should_profile = false
+if should_profile then
   local hrtime = vim.loop.hrtime
-  pro***REMOVED***le_info = {}
+  profile_info = {}
   time = function(chunk, start)
     if start then
-      pro***REMOVED***le_info[chunk] = hrtime()
+      profile_info[chunk] = hrtime()
     else
-      pro***REMOVED***le_info[chunk] = (hrtime() - pro***REMOVED***le_info[chunk]) / 1e6
+      profile_info[chunk] = (hrtime() - profile_info[chunk]) / 1e6
     end
   end
 else
   time = function(chunk, start) end
 end
 
-local function save_pro***REMOVED***les(threshold)
+local function save_profiles(threshold)
   local sorted_times = {}
-  for chunk_name, time_taken in pairs(pro***REMOVED***le_info) do
+  for chunk_name, time_taken in pairs(profile_info) do
     sorted_times[#sorted_times + 1] = {chunk_name, time_taken}
   end
   table.sort(sorted_times, function(a, b) return a[2] > b[2] end)
@@ -45,22 +45,22 @@ local function save_pro***REMOVED***les(threshold)
     table.insert(results, '(Only showing plugins that took longer than ' .. threshold .. ' ms ' .. 'to load)')
   end
 
-  _G._packer.pro***REMOVED***le_output = results
+  _G._packer.profile_output = results
 end
 
 time([[Luarocks path setup]], true)
 local package_path_str = "/home/rafail/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?.lua;/home/rafail/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?/init.lua;/home/rafail/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?.lua;/home/rafail/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?/init.lua"
 local install_cpath_pattern = "/home/rafail/.cache/nvim/packer_hererocks/2.1.1710088188/lib/lua/5.1/?.so"
-if not string.***REMOVED***nd(package.path, package_path_str, 1, true) then
+if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
 
-if not string.***REMOVED***nd(package.cpath, install_cpath_pattern, 1, true) then
+if not string.find(package.cpath, install_cpath_pattern, 1, true) then
   package.cpath = package.cpath .. ';' .. install_cpath_pattern
 end
 
 time([[Luarocks path setup]], false)
-time([[try_loadstring de***REMOVED***nition]], true)
+time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
   local success, result = pcall(loadstring(s), name, _G.packer_plugins[name])
   if not success then
@@ -71,8 +71,8 @@ local function try_loadstring(s, component, name)
   return result
 end
 
-time([[try_loadstring de***REMOVED***nition]], false)
-time([[De***REMOVED***ning packer_plugins]], true)
+time([[try_loadstring definition]], false)
+time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Comment.nvim"] = {
     loaded = true,
@@ -144,10 +144,10 @@ _G.packer_plugins = {
     path = "/home/rafail/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-lspcon***REMOVED***g"] = {
+  ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/rafail/.local/share/nvim/site/pack/packer/start/nvim-lspcon***REMOVED***g",
-    url = "https://github.com/neovim/nvim-lspcon***REMOVED***g"
+    path = "/home/rafail/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -201,7 +201,7 @@ _G.packer_plugins = {
   }
 }
 
-time([[De***REMOVED***ning packer_plugins]], false)
+time([[Defining packer_plugins]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
@@ -209,11 +209,11 @@ if _G._packer.needs_bufread == true then
 end
 _G._packer.needs_bufread = false
 
-if should_pro***REMOVED***le then save_pro***REMOVED***les() end
+if should_profile then save_profiles() end
 
 end)
 
 if not no_errors then
   error_msg = error_msg:gsub('"', '\\"')
-  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your con***REMOVED***g for correctness" | echohl None')
+  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end

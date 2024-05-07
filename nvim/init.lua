@@ -1,5 +1,5 @@
-require("con***REMOVED***g.options")
-require("con***REMOVED***g.keymaps")
+require("config.options")
+require("config.keymaps")
 
 require("plugins.plugins")
 require("plugins.lsp")

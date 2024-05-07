@@ -6,7 +6,7 @@ local function on_attach(bufnr)
     return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
 
-  api.con***REMOVED***g.mappings.default_on_attach(bufnr)
+  api.config.mappings.default_on_attach(bufnr)
 
 
   map("n", "<S-e>", api.tree.toggle, opts("Toggle"))

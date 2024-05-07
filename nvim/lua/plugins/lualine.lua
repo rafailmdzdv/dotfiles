@@ -3,7 +3,7 @@ require("lualine").setup({
     lualine_a = {{"mode"}},
     lualine_c = {
       {
-        "***REMOVED***lename",
+        "filename",
         path = 1
       }
     }

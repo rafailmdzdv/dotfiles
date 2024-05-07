@@ -4,16 +4,16 @@
 
 # some apps
 super + {t,f}
-	{alacritty,***REMOVED***refox}
+	{alacritty,firefox}
 
 # program launcher
 super + @space
 	dmenu_run
 
 super + a
-	ro***REMOVED*** -con***REMOVED***g ~/.con***REMOVED***g/ro***REMOVED***/con***REMOVED***g.rasi -show drun
+	rofi -config ~/.config/rofi/config.rasi -show drun
 
-# make sxhkd reload its con***REMOVED***guration ***REMOVED***les:
+# make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
@@ -63,7 +63,7 @@ super + {_,shift + }{h,j,k,l}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
-	bspc node -f @{parent,brother,***REMOVED***rst,second}
+	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
 super + {_,shift + }c
