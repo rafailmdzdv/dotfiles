@@ -1,5 +1,3 @@
-# ~/.config/betterlockscreenrc
-
 # default options
 display_on=0
 span_image=false
@@ -25,7 +23,7 @@ insidevercolor=00000000
 ringwrongcolor=ffffffff
 insidewrongcolor=d23c3dff
 timecolor=ffffffff
-time_format="%A, %d %H:%M:%S"
+time_format=%H:%M:%S"
 greetercolor=ffffffff
 layoutcolor=ffffffff
 keyhlcolor=d23c3dff

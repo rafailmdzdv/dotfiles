@@ -34,7 +34,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cp $rootdir/tmux/.tmux.conf ~/.tmux.conf
 tmux source ~/.tmux.conf
 
-betterlockscreen -u $rootdir/wallpapers/musashi2.jpg
+betterlockscreen -u $rootdir/wallpapers/wp.jpg
 
 sddm
 sddmThemesPath=/usr/share/sddm/themes
