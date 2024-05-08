@@ -35,3 +35,13 @@ cp $rootdir/tmux/.tmux.conf ~/.tmux.conf
 tmux source ~/.tmux.conf
 
 betterlockscreen -u $rootdir/wallpapers/musashi2.jpg
+
+sddm
+sddmThemesPath=/usr/share/sddm/themes
+candypath=$sddmThemesPath/sugar-candy
+sudo wget https://github.com/Kangie/sddm-sugar-candy/archive/refs/tags/v1.6.tar.gz -O $sddmThemesPath/sugar-candy.tar.gz
+sudo tar xf $sddmThemesPath/sugar-candy.tar.gz --transform s/sddm-sugar-candy-1.6/sugar-candy/ -C $sddmThemesPath
+sudo rm $sddmThemesPath/sugar-candy.tar.gz
+sudo cp $rootdir/wallpapers/wp.jpg $candypath/Backgrounds
+sudo cp $rootdir/sddm/sddm.conf /etc
+sudo cp $rootdir/sddm/candy/theme.conf $candypath
