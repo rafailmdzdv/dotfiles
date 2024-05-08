@@ -12,7 +12,7 @@ cat << EOF > ~/.xinitrc
     exec bspwm
 EOF
 
-apps=(alacritty nvim polybar bspwm sxhkd)
+apps=(alacritty nvim polybar bspwm sxhkd rofi)
 
 if [ ! -d ~/.config ]; then
     mkdir ~/.config
