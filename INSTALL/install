@@ -1,7 +1,7 @@
 #!/bin/sh
 
-rootdir=$(dirname $(dirname $(realpath $0)))
 currentdir=$(dirname $(realpath $0))
+rootdir=$(dirname $currentdir)
 
 echo Installing dependencies
 sudo pacman -S $(cat $currentdir/packages.list)
@@ -12,7 +12,7 @@ cat << EOF > ~/.xinitrc
     exec bspwm
 EOF
 
-apps=(alacritty nvim polybar bspwm sxhkd rofi)
+apps=(alacritty nvim polybar bspwm sxhkd rofi betterlockscreen)
 
 if [ ! -d ~/.config ]; then
     mkdir ~/.config
@@ -33,3 +33,5 @@ echo Setting up Tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cp $rootdir/tmux/.tmux.conf ~/.tmux.conf
 tmux source ~/.tmux.conf
+
+betterlockscreen -u $rootdir/wallpapers/musashi2.jpg
