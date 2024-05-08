@@ -7,22 +7,26 @@
 - Tmux
 - bspwm
 
+### Another utils
+- Rofi (application launcher)
+- VLC (videoplayer)
+- nnn (cli file explorer)
+- Polybar (status bar)
+
+## Wiki
+Available soon...
+
+
 ## Install
 
 ```shell
-$ git clone https://github.com/rafailmdzdv/dotfiles.git ~/.dotfiles && cd ~/.dotfiles
-$ ln -s ~/.dotfiles/{bspwm,sxhkd,polybar,nvim,alacritty} ~/.config
-$ ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-$ ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+$ git clone https://github.com/rafailmdzdv/dotfiles.git ~/.dotfiles && sh -c ~/.dotfiles/INSTALL/install
 ```
-
-### Tmux
-Install [TPM](https://github.com/tmux-plugins/tpm) for tmux.
 
 ### Vim
 Install [packer](https://github.com/wbthomason/packer.nvim) and then:
 ```shell
-$ nvim ~/.dotfiles/nvim/init.lua
+$ nvim ~/.dotfiles/nvim/lua/plugins/plugins.lua
 ```
 `:so%`
 and then:
