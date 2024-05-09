@@ -45,3 +45,5 @@ sudo rm $sddmThemesPath/sugar-candy.tar.gz
 sudo cp $rootdir/wallpapers/wp.jpg $candypath/Backgrounds
 sudo cp $rootdir/sddm/sddm.conf /etc
 sudo cp $rootdir/sddm/candy/theme.conf $candypath
+sudo systemctl enable sddm
+sudo systemctl start sddm
