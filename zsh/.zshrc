@@ -38,4 +38,4 @@ alias neovide="neovide --wsl"
 # do
 #     export PATH=$PATH:$dir/bin
 # done
-
+export NNN_PLUG='s:! echo $nnn|xclip -selection clipboard*'
