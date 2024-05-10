@@ -20,15 +20,15 @@ size = 10
 
 [font.bold]
 family = "Hack Nerd Font"
-style = "auto"
+style = "Bold"
 
 [font.bold_italic]
 family = "Hack Nerd Font"
-style = "auto"
+style = "Bold Italic"
 
 [font.italic]
 family = "Hack Nerd Font"
-style = "auto"
+style = "Italic"
 
 [font.normal]
 family = "Hack Nerd Font"
