@@ -19,3 +19,6 @@ map("n", "<leader>q", "<cmd>bd<CR>", opts)
 
 -- Neotree
 map("n", "<S-e>", "<cmd>NvimTreeToggle<CR>", opts)
+
+
+map("i", "jk", "<esc>", opts)
