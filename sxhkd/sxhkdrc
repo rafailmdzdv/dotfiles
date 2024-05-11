@@ -43,6 +43,9 @@ XF86AudioPlay
 
 XF86AudioStop
     playerctl stop
+
+super + shift + l
+    betterlockscreen -l
 #
 # bspwm hotkeys
 #
