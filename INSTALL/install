@@ -23,7 +23,7 @@ for app in "${apps[@]}"; do
     cp -r $rootdir/$app ~/.config/
 done
 
-wget https://raw.githubusercontent.com/polybar/polybar-scripts/master/polybar-scripts/player-mpris-tail/player-mpris-tail.py -O ~/.local/bin
+wget https://raw.githubusercontent.com/polybar/polybar-scripts/master/polybar-scripts/player-mpris-tail/player-mpris-tail.py -O ~/.local/bin/player-mpris-tail.py
 chmod +x ~/.local/bin/player-mpris-tail.py
 
 # Zsh
