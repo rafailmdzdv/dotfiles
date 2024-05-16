@@ -18,4 +18,9 @@ vim.opt.autoread = true
 
 vim.opt.ignorecase = false
 
-vim.o.swapfile = false
+local config_dir = vim.fn.expand("~/.config/nvim")
+local undodir = config_dir .. "/.undodir/"
+os.execute("mkdir -p " .. undodir)
+vim.o.swapfile = true
+vim.o.undofile = true
+vim.o.undodir = undodir
