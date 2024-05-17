@@ -1,5 +1,6 @@
 vim.opt.termguicolors = true
-vim.cmd("colorscheme catppuccin-mocha")
+require("monokai-pro").setup({filter="classic"})
+vim.cmd("colorscheme monokai-pro")
 vim.o.cursorline = true
 vim.cmd[[hi CursorLineNr guibg=black guifg=white]]
 
