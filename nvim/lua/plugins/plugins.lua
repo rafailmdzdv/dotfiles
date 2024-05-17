@@ -7,6 +7,7 @@ return require("packer").startup(function(use)
   use "ayu-theme/ayu-vim"
   use "ellisonleao/gruvbox.nvim"
   use "catppuccin/nvim"
+  use "loctvl842/monokai-pro.nvim"
 
   -- LSP
   use "neovim/nvim-lspconfig"
