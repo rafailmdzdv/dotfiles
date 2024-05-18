@@ -13,10 +13,11 @@ require("plugins.bufferline")
 require("plugins.autopairs")
 require("plugins.prettier")
 require("plugins.comment")
--- require("plugins.lualine")
-require("plugins.nvimtree")
+require("plugins.lualine")
 require("plugins.reload")
 require("plugins.icons")
+require("plugins.guess_indent")
+require("plugins.neotree")
 
 if vim.g.neovide then
 

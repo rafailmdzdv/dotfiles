@@ -1,3 +1,4 @@
+require("neodev").setup()
 local lspconfig = require("lspconfig")
 
 local opts = { noremap = true, silent = true }
@@ -9,7 +10,7 @@ local on_attach = function()
     vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
     vim.keymap.set("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
     vim.keymap.set("n", "<leader>D", "<cmd>Telescope lsp_type_definitions<CR>", opts)
-    vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+    vim.keymap.set("n", "<leader>rn", require("renamer").rename, opts)
     vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
     vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", opts)
     vim.keymap.set("n", "<leader>d", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)

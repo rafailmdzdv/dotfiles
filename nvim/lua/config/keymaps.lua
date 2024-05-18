@@ -1,24 +1,27 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+local normal = "n"
+local visual = "v"
+local insert = "i"
+
 vim.g.mapleader = " "
 
 -- Split window
-map("n", "sv", "<cmd>vsplit<CR>", opts)
-map("n", "sg", "<cmd>split<CR>", opts)
+map(normal, "sv", function () vim.cmd("vsplit") end, opts)
+map(normal, "sg", function () vim.cmd("split") end, opts)
 
-map("n", "<S-l>", "<cmd>bnext<CR>", opts)
-map("n", "<S-h>", "<cmd>bprev<CR>", opts)
+map(normal, "<S-l>", function () vim.cmd("bnext") end, opts)
+map(normal, "<S-h>", function () vim.cmd("bprev") end, opts)
 
 -- Indent
-map("v", "<", "<gv")
-map("v", ">", ">gv")
+map(visual, "<", "<gv")
+map(visual, ">", ">gv")
 
 -- Buffer
-map("n", "<leader>q", "<cmd>bd<CR>", opts)
+map(normal, "<leader>q", function () vim.cmd("bd") end, opts)
 
--- Neotree
-map("n", "<S-e>", "<cmd>NvimTreeToggle<CR>", opts)
+-- Markdown
+map(normal, "<leader>mp", function() vim.cmd("MarkdownPreview") end, opts)
 
-
-map("i", "jk", "<esc>", opts)
+map(insert, "jk", "<esc>", opts)

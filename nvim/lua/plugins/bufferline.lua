@@ -1,6 +1,9 @@
-require("bufferline").setup({
+local bufferline = require("bufferline")
+bufferline.setup({
   options = {
     mode = "buffers",
-    show_tab_indicators = true
+    style_preset = bufferline.style_preset.default,
+    show_tab_indicators = true,
+    separator_style = "slope"
   }
 })
