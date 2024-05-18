@@ -26,3 +26,18 @@ os.execute("mkdir -p " .. undodir)
 vim.o.swapfile = true
 vim.o.undofile = true
 vim.o.undodir = undodir
+
+vim.api.nvim_create_autocmd(
+  "BufRead",
+  {
+    pattern = {"*.md"},
+    callback = function () vim.o.colorcolumn = "120" end
+  }
+)
+vim.api.nvim_create_autocmd(
+  "BufRead",
+  {
+    pattern = {"*.lua", "*.py", ".js", ".jsx", ".ts", ".tsx", ".rs"},
+    callback = function () vim.o.colorcolumn = "80" end
+  }
+)
