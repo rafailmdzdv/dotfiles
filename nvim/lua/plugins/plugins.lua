@@ -35,7 +35,6 @@ return require("packer").startup(function(use)
   use "nvim-tree/nvim-web-devicons"
   use "numToStr/Comment.nvim"
   use "nvim-lualine/lualine.nvim"
-  use "xiyaowong/transparent.nvim"
   use({
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
@@ -49,6 +48,6 @@ return require("packer").startup(function(use)
       "MunifTanjim/nui.nvim",
     }
   }
-
+  use "akinsho/toggleterm.nvim"
   use 'wakatime/vim-wakatime'
 end)

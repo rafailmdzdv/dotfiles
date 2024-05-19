@@ -219,10 +219,10 @@ _G.packer_plugins = {
     path = "/home/rafd/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["transparent.nvim"] = {
+  ["toggleterm.nvim"] = {
     loaded = true,
-    path = "/home/rafd/.local/share/nvim/site/pack/packer/start/transparent.nvim",
-    url = "https://github.com/xiyaowong/transparent.nvim"
+    path = "/home/rafd/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["vim-wakatime"] = {
     loaded = true,
