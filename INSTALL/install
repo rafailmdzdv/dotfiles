@@ -35,6 +35,7 @@ cp $rootdir/zsh/.zshrc ~/.zshrc
 echo Setting up Tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cp $rootdir/tmux/.tmux.conf ~/.tmux.conf
+mkdir -p $HOME/.config/tmux && cp $rootdir/tmux/default.tmuxtheme
 tmux source ~/.tmux.conf
 
 betterlockscreen -u $rootdir/wallpapers/wp.jpg
