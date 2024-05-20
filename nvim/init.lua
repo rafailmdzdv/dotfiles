@@ -18,6 +18,7 @@ require("plugins.reload")
 require("plugins.icons")
 require("plugins.guess_indent")
 require("plugins.neotree")
+require("plugins.toggleterm")
 
 if vim.g.neovide then
 

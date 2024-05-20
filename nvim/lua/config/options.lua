@@ -1,4 +1,3 @@
-vim.opt.cmdheight = 0
 vim.opt.termguicolors = true
 require("monokai-pro").setup({filter="classic"})
 vim.cmd("colorscheme monokai-pro")
