@@ -24,4 +24,8 @@ map(normal, "<leader>q", function () vim.cmd("bd") end, opts)
 -- Markdown
 map(normal, "<leader>mp", function() vim.cmd("MarkdownPreview") end, opts)
 
+-- Terminal
+local term = require("toggleterm")
+map(normal, "<leader>t", term.toggle, opts)
+
 map(insert, "jk", "<esc>", opts)
