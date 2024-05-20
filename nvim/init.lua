@@ -1,5 +1,6 @@
 require("config.options")
 require("config.keymaps")
+require("config.netrw")
 
 require("plugins.plugins")
 require("plugins.lsp")
@@ -17,7 +18,6 @@ require("plugins.lualine")
 require("plugins.reload")
 require("plugins.icons")
 require("plugins.guess_indent")
-require("plugins.neotree")
 require("plugins.toggleterm")
 
 if vim.g.neovide then
