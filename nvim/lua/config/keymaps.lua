@@ -1,31 +1,3 @@
-local map = vim.keymap.set
-local opts = { noremap = true, silent = true }
-
-local normal = "n"
-local visual = "v"
-local insert = "i"
-
-vim.g.mapleader = " "
-
--- Split window
-map(normal, "sv", function () vim.cmd("vsplit") end, opts)
-map(normal, "sg", function () vim.cmd("split") end, opts)
-
-map(normal, "<S-l>", function () vim.cmd("bnext") end, opts)
-map(normal, "<S-h>", function () vim.cmd("bprev") end, opts)
-
--- Indent
-map(visual, "<", "<gv")
-map(visual, ">", ">gv")
-
--- Buffer
-map(normal, "<leader>q", function () vim.cmd("bd") end, opts)
-
--- Markdown
-map(normal, "<leader>mp", function() vim.cmd("MarkdownPreview") end, opts)
-
--- Terminal
-local term = require("toggleterm")
-map(normal, "<leader>t", term.toggle, opts)
-
-map(insert, "jk", "<esc>", opts)
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here

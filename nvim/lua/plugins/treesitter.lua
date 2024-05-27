@@ -1,27 +1,23 @@
-require("nvim-treesitter.configs").setup({
-  ensure_installed = {
-    "python",
-    "lua",
-    "vim",
-    "javascript",
-    "typescript",
-    "bash",
-    "toml",
-    "html",
-    "css",
-    "yaml",
-    "sql",
+return {
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      opts.ensure_installed = {
+        "bash",
+        "cmake",
+        "html",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+        "jsonc",
+        "toml",
+        "yaml",
+        "lua",
+        "markdown",
+        "python",
+        "rust",
+      }
+    end,
   },
-
-  sync_install = false,
-  auto_install = true,
-
-  highlight = {
-    enable = true,
-
-    additional_vim_regex_highlighting = false,
-  },
-  autotag = {
-    enable = true
-  }
-})
+}
