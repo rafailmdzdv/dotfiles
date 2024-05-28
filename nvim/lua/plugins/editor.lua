@@ -9,4 +9,5 @@ return {
       { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live Grep" },
     },
   },
+  { "wakatime/vim-wakatime", lazy = false },
 }
