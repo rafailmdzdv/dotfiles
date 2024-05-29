@@ -11,7 +11,7 @@ super + @space
 	dmenu_run
 
 super + a
-	rofi -config ~/.config/rofi/config.rasi -show drun
+	sh ~/.config/rofi/launchers/type-6/launcher.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
