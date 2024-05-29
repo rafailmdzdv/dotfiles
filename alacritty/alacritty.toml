@@ -1,8 +1,6 @@
 live_config_reload = true
 
-import = [
-  "~/.dotfiles/alacritty/colorschemes/tokyo-night.toml"
-]
+import = ["~/.dotfiles/alacritty/colorschemes/tokyo-night.toml"]
 
 [cursor.style]
 blinking = "On"
@@ -36,7 +34,3 @@ style = "Regular"
 
 [window]
 dynamic_padding = true
-
-[window.padding]
-x = 5
-y = 5
