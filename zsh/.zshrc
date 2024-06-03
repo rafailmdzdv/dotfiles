@@ -1,3 +1,5 @@
+set -o vi
+
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="clean"
 plugins=(git fzf-tab)
