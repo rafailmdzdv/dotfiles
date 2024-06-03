@@ -1,33 +1,35 @@
 # My personal dotfiles
 
-## Stack:
+## Stack
 
-- Neovim
-- Alacritty
-- Tmux
+- neovim
+- alacritty
+- tmux
 - bspwm
 
 ### Another utils
+
 - Rofi (application launcher)
 - VLC (videoplayer)
 - nnn (cli file explorer)
 - Polybar (status bar)
+- wlogout (logout menu)
+- sddm (display manager)
 
 ## Wiki
-Available soon...
 
+Available soon...
 
 ## Install
 
 ```shell
-$ git clone https://github.com/rafailmdzdv/dotfiles.git ~/.dotfiles && sh -c ~/.dotfiles/INSTALL/install
+git clone https://github.com/rafailmdzdv/dotfiles.git ~/.dotfiles && sh -c ~/.dotfiles/INSTALL/install
 ```
 
 ### Vim
-Install [packer](https://github.com/wbthomason/packer.nvim) and then:
+
 ```shell
-$ nvim ~/.dotfiles/nvim/lua/plugins/plugins.lua
+nvim
 ```
-`:so%`
-and then:
-`:PackerSync`
+
+`:Lazy sync`
