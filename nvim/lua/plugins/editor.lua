@@ -10,4 +10,5 @@ return {
     },
   },
   { "wakatime/vim-wakatime", lazy = false },
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
 }
