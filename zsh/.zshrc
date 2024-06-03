@@ -1,5 +1,3 @@
-set -o vi
-
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="clean"
 plugins=(git fzf-tab)
@@ -41,3 +39,5 @@ alias neovide="neovide --wsl"
 #     export PATH=$PATH:$dir/bin
 # done
 export NNN_PLUG='s:! echo $nnn|xclip -selection clipboard*'
+
+set -o vi
