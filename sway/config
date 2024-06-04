@@ -56,7 +56,7 @@ focus output HDMI-A-2
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+t exec $term
 
     # Start a web browser
     bindsym $mod+f exec $web
