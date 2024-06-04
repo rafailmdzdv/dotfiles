@@ -18,8 +18,7 @@
   "modules-right": [
     "mpd",
     "pulseaudio",
-    "network",
-    "power-profiles-daemon",
+    // "network",
     "cpu",
     "memory",
     "temperature",
@@ -99,7 +98,7 @@
   },
   "clock": {
     // "timezone": "America/New_York",
-    "format": "{:%A, %d %B %H-%M}",
+    "format": "{:%A, %d %B %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
   },
   "cpu": {
@@ -140,17 +139,6 @@
   "battery#bat2": {
     "bat": "BAT2",
   },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": "",
-    },
-  },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "{essid} ({signalStrength}%) ",
@@ -162,7 +150,7 @@
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
+    "format": "{volume}% {icon} ",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",

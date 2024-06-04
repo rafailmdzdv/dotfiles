@@ -1,3 +1,4 @@
+@define-color button-bg #ffffff;
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -194,7 +195,7 @@ label:focus {
 }
 
 #pulseaudio {
-  background-color: #f1c40f;
+  background-color: @button-bg;
   color: #000000;
 }
 
