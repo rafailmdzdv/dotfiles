@@ -71,7 +71,7 @@ output HDMI-A-2 resolution 1920x1080 position 0,0
     # Start your launcher
     bindsym $mod+a exec $menu
 
-    bindsym $mod+x exec wlogout
+    bindsym $mod+x exec wlogout -b 4 -p layer-shell
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
