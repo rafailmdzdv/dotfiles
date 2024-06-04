@@ -1,4 +1,7 @@
 # Logo key. Use Mod1 for Alt.
+exec gentoo-pipewire-launcher &
+exec waybar &
+
 set $mod Mod4
 
 set $left h
@@ -16,13 +19,14 @@ set $menu sh $HOME/.config/rofi/launchers/type-6/launcher.sh | xargs swaymsg exe
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/rafail/Downloads/pexels-o-seop-sim-440723986-15375820.jpg fill
+set $wp_path $HOME/.config/wallpapers
+ output * bg $wp_path/korea.png fill
 #
 # Example configuration:
 #
-output HDMI-A-1 resolution 1920x1080 position 1920,0
+# output HDMI-A-1 resolution 1920x1080 position 1920,0
 output HDMI-A-2 resolution 1920x1080 position 0,0
-focus output HDMI-A-2
+# focus output HDMI-A-2
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -66,6 +70,8 @@ focus output HDMI-A-2
 
     # Start your launcher
     bindsym $mod+a exec $menu
+
+    bindsym $mod+x exec wlogout
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
