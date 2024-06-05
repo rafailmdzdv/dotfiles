@@ -1,6 +1,8 @@
 # Logo key. Use Mod1 for Alt.
 exec gentoo-pipewire-launcher &
-exec waybar &
+
+set $waybar_reload pkill -USR2 -x waybar
+exec $waybar_reload || waybar
 
 set $mod Mod4
 
@@ -88,6 +90,7 @@ focus output HDMI-A-2
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+w exec $waybar_reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
