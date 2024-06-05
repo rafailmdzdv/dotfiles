@@ -208,4 +208,6 @@ default_floating_border none
 titlebar_padding 1
 titlebar_border_thickness 0
 
+gaps inner 7
+
 include /etc/sway/config.d/*
