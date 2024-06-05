@@ -3,18 +3,18 @@
   // "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
   "reload_style_on_change": true,
-  "height": 20, // Waybar height (to be removed for auto height)
+  "height": 10, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
-  "spacing": 4, // Gaps between modules (4px)
+  "spacing": 8, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
     "sway/workspaces",
+    "wlr/taskbar",
     "sway/mode",
     "sway/scratchpad",
-    "custom/media",
     "sway/window",
   ],
-  "modules-center": [],
+  "modules-center": ["custom/media"],
   "modules-right": [
     "mpd",
     "pulseaudio",
@@ -173,6 +173,11 @@
     "max-length": 40,
     "escape": true,
     "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
   },
 
   "sway/window": {
@@ -180,6 +185,21 @@
     "rewrite": {
       "[0-9]:[0-9]+:(.*)": "$1",
       "(.*) — Mozilla Firefox": "$1",
+    },
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 14,
+    "icon-theme": "Numix-Circle",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition",
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      "Foot Server": "Terminal",
     },
   },
 }
