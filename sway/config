@@ -15,6 +15,7 @@ set $web firefox
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu sh $HOME/.config/rofi/launchers/type-6/launcher.sh | xargs swaymsg exec --
+set $screenshot_dir $HOME/Pictures/Screenshots
 
 ### Output configuration
 #
@@ -26,7 +27,7 @@ set $wp_path $HOME/.config/wallpapers
 #
 # output HDMI-A-1 resolution 1920x1080 position 1920,0
 output HDMI-A-2 resolution 1920x1080 position 0,0
-# focus output HDMI-A-2
+focus output HDMI-A-2
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -72,6 +73,10 @@ output HDMI-A-2 resolution 1920x1080 position 0,0
     bindsym $mod+a exec $menu
 
     bindsym $mod+x exec wlogout -b 4 -p layer-shell
+
+    bindsym Print exec SWAY_SCREENSHOT_DIR=$screenshot_dir sway-screenshot -m output
+    bindsym $mod+Print exec SWAY_SCREENSHOT_DIR=$screenshot_dir sway-screenshot -m window
+    bindsym $mod+Shift+Print exec SWAY_SCREENSHOT_DIR=$screenshot_dir sway-screenshot -m region
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
