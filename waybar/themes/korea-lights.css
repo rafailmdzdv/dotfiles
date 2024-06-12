@@ -260,7 +260,7 @@ label:focus {
 #tray {
   border-radius: 10px;
   border: 1px solid;
-  color: #ffffff;
+  color: @button-bg;
   background-color: transparent;
 }
 
