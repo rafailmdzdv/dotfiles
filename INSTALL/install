@@ -6,13 +6,7 @@ rootdir=$(dirname $currentdir)
 echo Installing dependencies
 sudo pacman -S $(cat $currentdir/packages.list)
 
-cat << EOF > ~/.xinitrc
-    polybar -r &
-    sxhkd &
-    exec bspwm
-EOF
-
-apps=(alacritty nvim polybar bspwm sxhkd rofi betterlockscreen)
+apps=(alacritty nvim waybar sway rofi wlogout swaync zathura scripts)
 
 if [ ! -d ~/.config ]; then
     mkdir ~/.config
@@ -23,9 +17,6 @@ for app in "${apps[@]}"; do
     cp -r $rootdir/$app ~/.config/
 done
 
-wget https://raw.githubusercontent.com/polybar/polybar-scripts/master/polybar-scripts/player-mpris-tail/player-mpris-tail.py -O ~/.local/bin/player-mpris-tail.py
-chmod +x ~/.local/bin/player-mpris-tail.py
-
 # Zsh
 echo Setting up ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -35,12 +26,10 @@ cp $rootdir/zsh/.zshrc ~/.zshrc
 echo Setting up Tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cp $rootdir/tmux/.tmux.conf ~/.tmux.conf
-mkdir -p $HOME/.config/tmux && cp $rootdir/tmux/default.tmuxtheme
+mkdir -p $HOME/.config/tmux && cp $rootdir/tmux/default.tmuxtheme $HOME/.config/tmux
 tmux source ~/.tmux.conf
 
-betterlockscreen -u $rootdir/wallpapers/wp.jpg
-
-sddm
+# sddm
 sddmThemesPath=/usr/share/sddm/themes
 candypath=$sddmThemesPath/sugar-candy
 sudo wget https://github.com/Kangie/sddm-sugar-candy/archive/refs/tags/v1.6.tar.gz -O $sddmThemesPath/sugar-candy.tar.gz
