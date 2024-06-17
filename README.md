@@ -5,14 +5,14 @@
 - neovim
 - alacritty
 - tmux
-- bspwm
+- sway
 
 ### Another utils
 
 - Rofi (application launcher)
 - VLC (videoplayer)
 - nnn (cli file explorer)
-- Polybar (status bar)
+- waybar (status bar)
 - wlogout (logout menu)
 - sddm (display manager)
 
@@ -24,6 +24,7 @@ Available soon...
 
 ```shell
 git clone https://github.com/rafailmdzdv/dotfiles.git ~/.dotfiles && sh -c ~/.dotfiles/INSTALL/install
+sh -c ~/.dotfiles/install
 ```
 
 ### Vim
