@@ -6,29 +6,6 @@ rootdir=$(dirname $currentdir)
 echo Installing dependencies
 sudo pacman -S $(cat $currentdir/packages.list)
 
-apps=(alacritty nvim waybar sway rofi wlogout swaync zathura scripts)
-
-if [ ! -d ~/.config ]; then
-    mkdir ~/.config
-fi
-echo Copying files into ~/.config
-for app in "${apps[@]}"; do
-    echo $app
-    cp -r $rootdir/$app ~/.config/
-done
-
-# Zsh
-echo Setting up ZSH
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-cp $rootdir/zsh/.zshrc ~/.zshrc
-
-# TPM
-echo Setting up Tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-cp $rootdir/tmux/.tmux.conf ~/.tmux.conf
-mkdir -p $HOME/.config/tmux && cp $rootdir/tmux/default.tmuxtheme $HOME/.config/tmux
-tmux source ~/.tmux.conf
-
 # sddm
 sddmThemesPath=/usr/share/sddm/themes
 candypath=$sddmThemesPath/sugar-candy
