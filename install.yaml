@@ -1,0 +1,27 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- link:
+    ~/.zshrc: zsh/.zshrc
+    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.config/tmux/default.tmuxtheme:
+      path: tmux/default.tmuxtheme
+      create: true
+    ~/.config/nvim: nvim
+    ~/.config/waybar: waybar
+    ~/.config/sway: sway
+    ~/.config/rofi: rofi
+    ~/.config/wlogout: wlogout
+    ~/.config/scripts: scripts
+    ~/.config/swaync: swaync
+    ~/.config/zathura: zathura
+    ~/.config/alacritty: alacritty
+
+- create:
+    - ~/.config
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
