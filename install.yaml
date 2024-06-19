@@ -5,20 +5,21 @@
 - clean: ["~"]
 
 - link:
-    ~/.zshrc: zsh/.zshrc
-    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.zshrc: config/zsh/.zshrc
+    ~/.tmux.conf: config/tmux/.tmux.conf
     ~/.config/tmux/default.tmuxtheme:
-      path: tmux/default.tmuxtheme
+      path: config/tmux/default.tmuxtheme
       create: true
-    ~/.config/nvim: nvim
-    ~/.config/waybar: waybar
-    ~/.config/sway: sway
-    ~/.config/rofi: rofi
-    ~/.config/wlogout: wlogout
-    ~/.config/scripts: scripts
-    ~/.config/swaync: swaync
-    ~/.config/zathura: zathura
-    ~/.config/alacritty: alacritty
+    ~/.config/nvim: config/nvim
+    ~/.config/waybar: config/waybar
+    ~/.config/sway: config/sway
+    ~/.config/rofi: config/rofi
+    ~/.config/wlogout: config/wlogout
+    ~/.config/scripts: config/scripts
+    ~/.config/swaync: config/swaync
+    ~/.config/zathura: config/zathura
+    ~/.config/alacritty: config/alacritty
+    ~/.config/wallpapers: config/wallpapers
 
 - create:
     - ~/.config
