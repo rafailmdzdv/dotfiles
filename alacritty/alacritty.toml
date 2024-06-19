@@ -1,6 +1,6 @@
 live_config_reload = true
 
-import = ["~/.dotfiles/alacritty/colorschemes/ayu_dark.toml"]
+import = ["~/.dotfiles/alacritty/colorschemes/korea-lights.toml"]
 
 [cursor.style]
 blinking = "On"
@@ -33,5 +33,6 @@ family = "ComicShannsMono Nerd Font"
 style = "Regular"
 
 [window]
+opacity = 0.9
 dynamic_padding = true
 padding = { x = 10, y = 10 }
