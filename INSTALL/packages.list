@@ -1,5 +1,4 @@
-bspwm
-sxhkd
+swayfx
 rofi
 waybar
 curl
@@ -30,8 +29,7 @@ xdg-desktop-portal-wlr
 alacritty
 firefox
 eza
-sway-screenshot-git
 pavucontrol
 swaync
 zathura
-swaylock-effects-git
+grim
