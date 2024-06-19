@@ -212,4 +212,10 @@ titlebar_border_thickness 0
 
 gaps inner 7
 
+set $opacity 0.85
+for_window [app_id="firefox"] opacity $opacity
+
+blur enable
+blur_radius 2
+
 include /etc/sway/config.d/*
