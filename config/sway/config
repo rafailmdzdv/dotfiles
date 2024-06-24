@@ -214,6 +214,7 @@ gaps inner 7
 
 set $opacity 0.85
 for_window [app_id="firefox"] opacity $opacity
+for_window [class="discord"] opacity $opacity
 
 blur enable
 blur_radius 2
