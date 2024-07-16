@@ -11,7 +11,7 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
-      colorscheme = "ayu-dark",
+      colorscheme = "gruvbox",
     } },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.linting.eslint" },
@@ -22,6 +22,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.java" },
+    { import = "lazyvim.plugins.extras.lang.rust" },
 
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     -- import/override with your plugins
