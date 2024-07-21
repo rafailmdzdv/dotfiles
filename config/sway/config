@@ -23,7 +23,7 @@ set $screenshot_dir $HOME/Pictures/Screenshots
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 set $wp_path $HOME/.config/wallpapers
- output * bg $wp_path/korea.png fill
+ output * bg $wp_path/korea.jpg fill
 #
 # Example configuration:
 #
@@ -209,18 +209,19 @@ bindsym $mod+r mode "resize"
 
 mouse_warping container
 
-default_border none
+client.focused #ffffff #f2bdbb #ffffff
+default_border pixel
 default_floating_border none
 titlebar_padding 1
 titlebar_border_thickness 0
 
 gaps inner 7
 
-set $opacity 0.85
+set $opacity 1
 for_window [app_id="firefox"] opacity $opacity
 for_window [class="discord"] opacity $opacity
 
-blur enable
-blur_radius 2
+# blur enable
+# blur_radius 2
 
 include /etc/sway/config.d/*
