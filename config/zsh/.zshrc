@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="clean"
-plugins=(git fzf-tab)
+plugins=(git fzf-tab zsh-wakatime)
 source $ZSH/oh-my-zsh.sh
 
 # aliases
