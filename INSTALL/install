@@ -6,6 +6,13 @@ rootdir=$(dirname $currentdir)
 echo Installing dependencies
 sudo pacman -S $(cat $currentdir/packages.list)
 
+echo Installing yay [AUR HELPER]
+yayRepo=$HOME/yay
+git clone https://aur.archlinux.org/yay.git $yayRepo && cd $yayRepo && makepkg -si && rm -rf $yayRepo && cd $rootdir
+
+echo Installing AUR dependencies
+sudo yay -S $(cat $currentdir/packages-aur.list)
+
 # sddm
 sddmThemesPath=/usr/share/sddm/themes
 candypath=$sddmThemesPath/sugar-candy

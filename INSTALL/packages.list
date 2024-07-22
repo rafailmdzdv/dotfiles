@@ -1,7 +1,7 @@
-swayfx
 rofi
 waybar
 curl
+base-devel
 git
 tmux
 zsh
@@ -12,7 +12,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 wireplumber
-nnn
+mc
 ripgrep
 fastfetch
 otf-font-awesome
@@ -20,8 +20,6 @@ ttf-font-awesome
 vlc
 sddm
 xclip
-wlogout
-fzf-tab-git
 bluez
 blueman
 xdg-desktop-portal
@@ -33,3 +31,4 @@ pavucontrol
 swaync
 zathura
 grim
+layer-shell-qt
