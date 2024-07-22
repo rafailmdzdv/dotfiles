@@ -59,7 +59,7 @@ button:hover {
 }
 
 #workspaces button {
-  border-radius: 15px;
+  border-radius: 0px;
   padding: 0 5px;
   background-color: @bg;
   color: @button-fg;
@@ -120,7 +120,7 @@ button:hover {
 }
 
 #window {
-  border-radius: 10px;
+  border-radius: 0px;
   border: 1px solid @button-bg;
   color: @button-fg;
   padding: 0 10px;
@@ -128,7 +128,7 @@ button:hover {
 }
 
 #clock {
-  border-radius: 10px;
+  border-radius: 0px;
   background-color: @button-bg;
 }
 
@@ -185,13 +185,13 @@ label:focus {
 }
 
 #cpu {
-  border-radius: 10px;
+  border-radius: 0px;
   background-color: @button-bg;
   color: @button-fg;
 }
 
 #memory {
-  border-radius: 10px;
+  border-radius: 0px;
   background-color: @button-bg;
   color: @button-fg;
 }
@@ -213,7 +213,7 @@ label:focus {
 }
 
 #pulseaudio {
-  border-radius: 10px;
+  border-radius: 0px;
   background-color: @button-bg;
   color: @button-fg;
 }
@@ -233,7 +233,7 @@ label:focus {
 }
 
 #custom-media {
-  border-radius: 10px;
+  border-radius: 0px;
   background-color: @button-bg;
   color: @button-fg;
   min-width: 100px;
@@ -248,7 +248,7 @@ label:focus {
 }
 
 #temperature {
-  border-radius: 10px;
+  border-radius: 0px;
   background-color: @button-bg;
   color: @button-fg;
 }
@@ -258,7 +258,7 @@ label:focus {
 }
 
 #tray {
-  border-radius: 10px;
+  border-radius: 0px;
   border: 1px solid;
   color: @button-bg;
   background-color: transparent;
@@ -300,7 +300,7 @@ label:focus {
 }
 
 #language {
-  border-radius: 10px;
+  border-radius: 0px;
   background: @button-bg;
   color: @button-fg;
   padding: 0 7px;
@@ -354,14 +354,14 @@ label:focus {
 }
 
 #taskbar {
-  border-radius: 10px;
+  border-radius: 0px;
   border: 1px solid;
   padding: 0 5px;
   color: @button-bg;
   background-color: transparent;
 }
 #taskbar button {
-  border-radius: 15px;
+  border-radius: 0px;
   padding: 0 10px;
   margin: 0 5px;
   color: @button-fg;
