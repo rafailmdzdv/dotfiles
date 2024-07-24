@@ -39,7 +39,7 @@ bindsym $mod+Backspace exec $HOME/.config/scripts/swaylock.sh
 
 bindsym Print exec SCREEN_DIR=$screenshot_dir $HOME/.config/scripts/fs_screenshot.sh
 bindsym Alt+Print exec SCREEN_DIR=$screenshot_dir $HOME/.config/scripts/region_screenshot.sh
-bindsym Alt+Shift+Print exec SCREEN_DIR=$screenshot_dir $HOME/.config/scripts/window_screenshot.sh
+bindsym Shift+Print exec SCREEN_DIR=$screenshot_dir $HOME/.config/scripts/window_screenshot.sh
 
 floating_modifier $mod normal
 
