@@ -41,6 +41,9 @@ bindsym Print exec SCREEN_DIR=$screenshot_dir $HOME/.config/scripts/fs_screensho
 bindsym Alt+Print exec SCREEN_DIR=$screenshot_dir $HOME/.config/scripts/region_screenshot.sh
 bindsym Shift+Print exec SCREEN_DIR=$screenshot_dir $HOME/.config/scripts/window_screenshot.sh
 
+bindsym F6 exec wpctl set-volume @DEFAULT_SINK@ 5%-
+bindsym F7 exec wpctl set-volume @DEFAULT_SINK@ 5%+ --limit 1
+
 floating_modifier $mod normal
 
 bindsym $mod+Shift+c reload
