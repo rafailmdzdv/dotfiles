@@ -20,6 +20,7 @@
     ~/.config/zathura: config/zathura
     ~/.config/alacritty: config/alacritty
     ~/.config/wallpapers: config/wallpapers
+    ~/.config/hypr: config/hypr
 
 - create:
     - ~/.config
