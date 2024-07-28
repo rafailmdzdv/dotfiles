@@ -60,7 +60,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/Downloads/pexels-o-seop-sim-440723986-15375820.jpg", height);
+    background-image:            url("~/Downloads/a_mountain_with_snow_and_clouds.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }

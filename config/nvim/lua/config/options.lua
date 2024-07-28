@@ -12,3 +12,4 @@ vim.opt.autoindent = true
 vim.opt.autoread = true
 
 vim.opt.ignorecase = false
+vim.opt.background = "light"

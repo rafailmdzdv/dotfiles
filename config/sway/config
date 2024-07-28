@@ -15,7 +15,7 @@ set $menu sh $HOME/.config/rofi/launchers/type-6/launcher.sh | xargs swaymsg exe
 set $screenshot_dir $HOME/Pictures/Screenshots
 
 set $wp_path $HOME/.config/wallpapers
- output * bg $wp_path/korea.jpg fill
+ output * bg ~/Downloads/a_mountain_with_snow_and_clouds.jpg fill
 
 output HDMI-A-2 resolution 1920x1080 position 0,0
 focus output HDMI-A-2

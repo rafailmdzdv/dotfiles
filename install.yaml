@@ -12,15 +12,15 @@
       create: true
     ~/.config/nvim: config/nvim
     ~/.config/waybar: config/waybar
-    ~/.config/sway: config/sway
     ~/.config/rofi: config/rofi
     ~/.config/wlogout: config/wlogout
     ~/.config/scripts: config/scripts
-    ~/.config/swaync: config/swaync
     ~/.config/zathura: config/zathura
     ~/.config/alacritty: config/alacritty
+    ~/.config/kitty: config/kitty
     ~/.config/wallpapers: config/wallpapers
     ~/.config/hypr: config/hypr
+    ~/.config/hyde: config/hyde
 
 - create:
     - ~/.config
