@@ -4,14 +4,15 @@
 
 - neovim
 - alacritty
+- kitty
 - tmux
-- sway
+- hyprland
 
 ### Another utils
 
 - Rofi (application launcher)
-- VLC (videoplayer)
-- nnn (cli file explorer)
+- mpv (videoplayer)
+- mc (cli file explorer) and dolphin (gui)
 - waybar (status bar)
 - wlogout (logout menu)
 - sddm (display manager)
