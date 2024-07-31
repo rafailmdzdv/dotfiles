@@ -10,7 +10,6 @@
     ~/.config/tmux/default.tmuxtheme:
       path: config/tmux/default.tmuxtheme
       create: true
-    ~/.config/nvim: config/nvim
     ~/.config/scripts: config/scripts
     ~/.config/zathura: config/zathura
     ~/.config/alacritty: config/alacritty
