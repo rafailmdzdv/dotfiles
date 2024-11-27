@@ -3,6 +3,9 @@
     "Python": {
       "language_servers": ["pyright", "ruff"],
       "format_on_save": "on"
+    },
+    "HTML": {
+      "format_on_save": "off"
     }
   },
   "vim_mode": true,

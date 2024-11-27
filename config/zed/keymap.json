@@ -15,6 +15,7 @@
     "context": "Editor && VimControl && !menu",
     "bindings": {
       "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
       "space r n": "editor::Rename",
       "space t": "workspace::NewTerminal",
       "space q": "pane::CloseActiveItem",
