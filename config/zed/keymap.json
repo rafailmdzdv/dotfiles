@@ -1,0 +1,33 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "Editor && VimControl && !menu",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space r n": "editor::Rename",
+      "space t": "workspace::NewTerminal",
+      "space q": "pane::CloseActiveItem",
+      "ctrl w j": "terminal_panel::ToggleFocus",
+      "L": "pane::ActivateNextItem",
+      "H": "pane::ActivatePrevItem"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-w k": "terminal_panel::ToggleFocus",
+      "space q": "pane::CloseActiveItem"
+    }
+  }
+]

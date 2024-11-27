@@ -1,0 +1,18 @@
+{
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"],
+      "format_on_save": "on"
+    }
+  },
+  "vim_mode": true,
+  "ui_font_size": 14,
+  "ui_font_family": "Hack Nerd Font",
+  "buffer_font_family": "Hack Nerd Font",
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Ayu Dark"
+  }
+}
