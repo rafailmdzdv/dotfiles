@@ -1,0 +1,2 @@
+--style=minimal
+--preview "sh $HOME/.config/fzf/fzf-preview.sh {}"
