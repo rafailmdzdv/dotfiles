@@ -9,7 +9,7 @@
     "modules-left": ["custom/launcher", "cpu", "memory", "niri/workspaces", "custom/weather"],
     "modules-center": ["custom/spotify"],
     "modules-right": ["tray", "backlight", "pulseaudio", "network", "battery", "clock", "custom/power-menu"],
-    "hyprland/workspaces": {
+    "niri/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
@@ -37,7 +37,7 @@
 
     "cpu": {
       "interval": 10,
-      "format": " {}%",
+      "format": " {}%",
       "max-length": 10,
       "on-click": "",
     },
@@ -121,7 +121,7 @@
         "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh",
     },
     "custom/launcher": {
-        "format": " <span color='#6a92d7'> </span>",
+        "format": " <span color='#6a92d7'> </span>",
         "on-click": "rofi -show drun",
     },
 }

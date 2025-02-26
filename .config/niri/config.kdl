@@ -18,6 +18,7 @@ input {
         }
     }
 
+
     // Next sections include libinput settings.
     // Omitting settings disables them, or leaves them at their default values.
     touchpad {
@@ -66,7 +67,7 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
 output "HDMI-A-1" {
-    mode "1920x1080@60"
+    mode "1920x1080@75"
 }
 
 output "HDMI-A-2" {
