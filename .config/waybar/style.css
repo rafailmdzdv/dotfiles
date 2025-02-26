@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-  background-color: rgba(26, 27, 38, 0.5);
+  background-color: rgba(31, 31, 40, 0.5);
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -21,7 +21,7 @@ window#waybar.hidden {
 
 #workspaces button {
   padding: 0 5px;
-  color: #7984A4;
+  color: #DDD8BB;
   background-color: transparent;
   /* Use box-shadow instead of border so the text isn't offset */
   box-shadow: inset 0 -3px transparent;
@@ -35,7 +35,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-  color: #6a92d7;
+  color: #98BC6D;
 }
 
 #workspaces button.urgent {
@@ -79,39 +79,36 @@ window#waybar.hidden {
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
   padding: 0 10px;
-  color: #e5e5e5;
+  color: #7eb3c9;
   /* color: #bf616a; */
   border-radius: 9.5px;
-  background-color: #1f2530;
+  background-color: #1f1f28;
 }
 
 #window,
 #workspaces {
   margin: 0 4px;
   border-radius: 7.8px;
-  background-color: #1f2530;
+  background-color: #1f1f28;
 }
 
 #cpu {
-  color: #fb958b;
-  background-color: #1f2530;
+  color: #e46a78;
 }
 
 #memory {
-  color: #ebcb8b;
-  background-color: #1f2530;
+  color: #e5c283;
 }
 
 #custom-power-menu {
   border-radius: 9.5px;
-  background-color: #1b242b;
   border-radius: 7.5px;
   padding: 0 5px;
 }
 
 #custom-launcher {
-  background-color: #1b242b;
-  color: #6a92d7;
+  background-color: #1f1f28;
+  color: #7eb3c9;
   border-radius: 7.5px;
   padding: 0 3px;
 }
@@ -158,7 +155,7 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-  color: #7d9bba;
+  color: #7eb3c9;
 }
 
 #backlight {
@@ -167,7 +164,7 @@ window#waybar.hidden {
 }
 
 #clock {
-  color: #c8d2e0;
+  color: #e46a78;
   /* background-color: #14141e; */
 }
 
@@ -204,7 +201,7 @@ label:focus {
 }
 
 #disk {
-  background-color: #964b00;
+  background-color: #1f1f28;
 }
 
 #bluetooth {
@@ -216,7 +213,7 @@ label:focus {
 }
 
 #network {
-  color: #b48ead;
+  color: #957FB8;
 }
 
 #network.disconnected {
@@ -224,17 +221,17 @@ label:focus {
 }
 
 #custom-media {
-  background-color: #66cc99;
+  background-color: #1f1f28;
   color: #2a5c45;
   min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-  background-color: #66cc99;
+  background-color: #1f1f28;
 }
 
 #custom-media.custom-vlc {
-  background-color: #ffa000;
+  background-color: #1f1f28;
 }
 
 #temperature {
@@ -308,4 +305,8 @@ label:focus {
 
 #keyboard-state > label.locked {
   background: rgba(0, 0, 0, 0.2);
+}
+
+#custom-media {
+  background-color: #1f1f28;
 }
