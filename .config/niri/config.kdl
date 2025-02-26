@@ -226,7 +226,8 @@ layout {
 // spawn-at-startup "alacritty" "-e" "fish"
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "oguri"
+spawn-at-startup "swww-daemon"
+spawn-at-startup "swww img ~/.config/wallpapers/fireplace.gif --transition-type outer --transition-pos 0.854,0.977"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -319,7 +320,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T { spawn "kitty"; }
     Mod+Return { spawn "swaylock-fancy"; }
-    Mod+W { spawn "zen-browser"; }
+    Mod+W { spawn "zen"; }
     Mod+Backspace { spawn "~/.config/waybar/scripts/power-menu/powermenu.sh"; }
     Mod+A { spawn "rofi" "-show" "drun"; }
 
