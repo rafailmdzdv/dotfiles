@@ -6,7 +6,7 @@
 
 window#waybar {
   background-color: rgba(0, 0, 0, 0);
-  color: #ffffff;
+  color: #DDD8BB;
   transition-property: background-color;
   transition-duration: 0.5s;
   border-top: 8px transparent;
@@ -43,10 +43,12 @@ window#waybar.hidden {
 }
 
 #window {
-  /* border-radius: 20px; */
-  /* padding-left: 10px; */
-  /* padding-right: 10px; */
-  color: #64727d;
+  color: #DDD8BB;
+  padding: 0 5px;
+}
+
+#window label {
+  font-size: 13px;
 }
 
 #clock,
