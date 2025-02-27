@@ -31,7 +31,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-  color: #bf616a;
+  color: #e46a78;
 }
 
 #workspaces button.active {
@@ -80,7 +80,7 @@ window#waybar.hidden {
 #custom-weather.default {
   padding: 0 10px;
   color: #7eb3c9;
-  /* color: #bf616a; */
+  /* color: #e46a78; */
   border-radius: 9.5px;
   background-color: #1f1f28;
 }

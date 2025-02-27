@@ -7,20 +7,17 @@
     "margin-right": 10,
     "spacing": 5, // Gaps between modules (4px)
     "modules-left": ["custom/launcher", "cpu", "memory", "niri/workspaces", "custom/media"],
-    "modules-center": ["custom/spotify"],
-    "modules-right": ["tray", "backlight", "pulseaudio", "network", "battery", "clock", "custom/power-menu"],
+    "modules-center": ["tray"],
+    "modules-right": ["pulseaudio", "network", "clock", "custom/power-menu"],
     "niri/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "urgent": "",
-        "active": "",
-        "default": ""
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
       }
     },
     "hyprland/window": {
@@ -47,12 +44,6 @@
         "format-alt":" {used:0.1f}G",
         "max-length": 10,
     },
-    "backlight": {
-        "device": "DP-1",
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "on-click": "",
-    },
     "network": {
         "format-wifi": "直 {signalStrength}%",
         "format-ethernet": " wired",
@@ -67,15 +58,8 @@
         "format-bluetooth-muted": " ",
         "format-muted": "婢",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
     },
 
     "bluetooth": {
@@ -117,15 +101,15 @@
     "on-scroll-down": "playerctl previous",
     },
     "custom/power-menu": {
-        "format": " <span color='#6a92d7'>⏻ </span>",
+        "format": " <span color='#7eb3c9'>⏻ </span>",
         "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh",
     },
     "custom/launcher": {
-        "format": " <span color='#6a92d7'> </span>",
+        "format": " <span color='#7eb3c9'> </span>",
         "on-click": "rofi -show drun",
     },
     "custom/media": {
-        "format": "{icon}{text}",
+        "format": "{icon} {text}",
         "return-type": "json",
         "format-icons": {
             "Playing": " ",
