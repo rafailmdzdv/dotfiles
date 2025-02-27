@@ -47,6 +47,10 @@ window#waybar.hidden {
   padding: 0 5px;
 }
 
+window#waybar.empty #window {
+  background: none;
+}
+
 #window label {
   font-size: 13px;
 }
