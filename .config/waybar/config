@@ -6,7 +6,7 @@
     "margin-bottom": 0,
     "margin-right": 10,
     "spacing": 5, // Gaps between modules (4px)
-    "modules-left": ["custom/launcher", "cpu", "memory", "niri/workspaces", "custom/weather"],
+    "modules-left": ["custom/launcher", "cpu", "memory", "niri/workspaces", "custom/media"],
     "modules-center": ["custom/spotify"],
     "modules-right": ["tray", "backlight", "pulseaudio", "network", "battery", "clock", "custom/power-menu"],
     "niri/workspaces": {
@@ -123,5 +123,18 @@
     "custom/launcher": {
         "format": " <span color='#6a92d7'> </span>",
         "on-click": "rofi -show drun",
+    },
+    "custom/media": {
+        "format": "{icon}{text}",
+        "return-type": "json",
+        "format-icons": {
+            "Playing": " ",
+            "Paused": " ",
+        },
+        "max-length":70,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
     },
 }
