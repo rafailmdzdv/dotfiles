@@ -332,6 +332,7 @@ binds {
     Mod+Ctrl+J     { move-window-down; }
     Mod+Ctrl+K     { move-window-up; }
     Mod+Ctrl+L     { move-column-right; }
+    Mod+Shift+T { toggle-column-tabbed-display; }
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
