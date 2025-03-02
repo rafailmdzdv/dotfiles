@@ -1,5 +1,6 @@
 { pkgs, flakes, ... }:
 {
+  nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     # Terminal emulators
     alacritty
@@ -27,9 +28,12 @@
     swaynotificationcenter
     swww
     libnotify
+    bluez
+    bluetui
 
     flakes.zen-browser
     telegram-desktop
+    steam
 
     nodejs
     python312Full
@@ -43,5 +47,17 @@
     nixd
     stylua
     tailwindcss-language-server
+
+    protonup
+    gamemode
   ];
+  xdg.portal = {
+        enable = true;
+        extraPortals = with pkgs; [ xdg-desktop-portal ];
+        config.common.default = "*";
+    };
+
+  home.sessionVariables = {
+        STEAM_EXTRA_COMPAT_TOOLS_PATHS = "$\{HOME\}/.steam/root/compatibilitytools.d";
+  };
 }

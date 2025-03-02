@@ -74,6 +74,7 @@
     wget
     curl
     gcc
+    protontricks
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
