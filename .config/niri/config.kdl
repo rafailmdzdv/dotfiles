@@ -70,11 +70,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
-window-rule {
     match app-id="zen" title="^Picture-in-Picture$"
     open-floating true
     open-focused false
