@@ -7,9 +7,11 @@ return {
         local map = vim.keymap.set
         map(normal, "L", vim.cmd.bn)
         map(normal, "H", vim.cmd.bp)
-        require("bufferline").setup({
+        local bufferline = require("bufferline")
+        bufferline.setup({
             options = {
                 buffer_close_icon = "",
+                style_preset = bufferline.style_preset.minimal,
             },
         })
     end,
