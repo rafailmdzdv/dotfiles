@@ -21,7 +21,7 @@
 
   fileSystems."/mnt/games" =
    { device = "/dev/disk/by-uuid/9254BE6D54BE53A7";
-     options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" "u+rwx" "o+rwx" "g+rwx" "user" "nofail" ];
+     options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" ];
      fsType = "ntfs";
    };
 
