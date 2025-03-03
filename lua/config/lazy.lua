@@ -22,7 +22,7 @@ require("lazy").setup({
 
 vim.api.nvim_create_autocmd("VimEnter", {
     group = vim.api.nvim_create_augroup("AutoUpdate", { clear = true }),
-    callback = function ()
+    callback = function()
         require("lazy").update({ show = false })
     end,
 })
