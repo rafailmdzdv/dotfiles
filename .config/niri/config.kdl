@@ -107,7 +107,6 @@ binds {
     Mod+Backspace hotkey-overlay-title="Power menu" { spawn "~/.config/waybar/scripts/power-menu/powermenu.sh"; }
     Mod+A hotkey-overlay-title="Application launcher" { spawn "rofi" "-show" "drun"; }
 
-
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+" "--limit" "1"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
