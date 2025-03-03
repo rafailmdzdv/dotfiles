@@ -1,0 +1,9 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$character"
+right_format = "$all"
+
+add_newline = true
+
+[package]
+disabled = true

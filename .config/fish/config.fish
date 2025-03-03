@@ -1,5 +1,6 @@
 set fish_greeting = ""
 
+set -x DISABLE_AUT_TITLE true
 set -x PATH "$HOME/bin:$PATH"
 set -x PATH "$PATH:$HOME/.local/bin"
 set -x PATH "$PATH:$HOME/.local/share/pypoetry/venv/bin/"
@@ -27,3 +28,7 @@ alias xcopy "xclip -selection clipboard"
 alias tmuxvert "tmux split-window -h -c '#{pane_current_path}'"
 alias l "eza --icons --all --long"
 alias ll "eza --icons --long"
+
+set -x STARSHIP_CONFIG "$HOME/.config/starship/starship.toml"
+
+starship init fish | source
