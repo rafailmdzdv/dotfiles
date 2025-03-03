@@ -1,4 +1,6 @@
-local function lsp_mappings_set()
+local function on_attach(_, buffer)
+    vim.api.nvim_buf_set_option(buffer, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
     local map = vim.keymap.set
     local normal = "n"
     map(normal, "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
@@ -21,7 +23,6 @@ return {
         "neovim/nvim-lspconfig",
         dependencies = "hrsh7th/cmp-nvim-lsp",
         config = function()
-            lsp_mappings_set()
             local lspconfig = require("lspconfig")
             local capabilities =
                 require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -35,11 +36,13 @@ return {
             for _, lsp in ipairs(lsprotocols) do
                 lspconfig[lsp].setup({
                     capabilities = capabilities,
+                    on_attach=on_attach,
                 })
             end
 
             lspconfig.lua_ls.setup({
                 capabilities = capabilities,
+                on_attach=on_attach,
                 settings = {
                     Lua = {
                         diagnostics = {
