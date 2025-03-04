@@ -36,13 +36,13 @@ return {
             for _, lsp in ipairs(lsprotocols) do
                 lspconfig[lsp].setup({
                     capabilities = capabilities,
-                    on_attach=on_attach,
+                    on_attach = on_attach,
                 })
             end
 
             lspconfig.lua_ls.setup({
                 capabilities = capabilities,
-                on_attach=on_attach,
+                on_attach = on_attach,
                 settings = {
                     Lua = {
                         diagnostics = {
