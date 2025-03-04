@@ -8,6 +8,7 @@ return {
 
         map(normal, "<leader>ff", builtin.find_files)
         map(normal, "<leader>fs", builtin.grep_string)
+        map(normal, "<leader>fg", builtin.live_grep)
         map(normal, "<leader>gf", builtin.git_files)
     end,
 }
