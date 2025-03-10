@@ -40,6 +40,8 @@ return {
                 "tailwindcss",
                 "ts_ls",
                 "nixd",
+                "html",
+                "cssls"
             }
             for _, lsp in ipairs(lsprotocols) do
                 lspconfig[lsp].setup({
