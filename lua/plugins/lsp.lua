@@ -1,5 +1,6 @@
-local function on_attach(_, buffer)
-    vim.api.nvim_buf_set_option(buffer, "omnifunc", "v:lua.vim.lsp.omnifunc")
+local function on_attach(client, bufnr)
+    local navic = require("nvim-navic")
+    vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
     local map = vim.keymap.set
     local normal = "n"
@@ -16,12 +17,19 @@ local function on_attach(_, buffer)
     map(normal, "<leader>d", "<cmd>lua vim.diagnostic.open_float()<CR>")
     map(normal, "<leader>dn", "<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>")
     map(normal, "<leader>dN", "<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>")
+
+    if client.server_capabilities.documentSymbolProvider then
+        navic.attach(client, bufnr)
+    end
 end
 
 return {
     {
         "neovim/nvim-lspconfig",
-        dependencies = "hrsh7th/cmp-nvim-lsp",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "SmiteshP/nvim-navic",
+        },
         config = function()
             local lspconfig = require("lspconfig")
             local capabilities =

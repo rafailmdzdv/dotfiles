@@ -1,8 +1,12 @@
 return {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = {
+        "nvim-tree/nvim-web-devicons",
+        "SmiteshP/nvim-navic",
+    },
     config = function()
         local lualine = require("lualine")
+        local navic = require("nvim-navic")
         lualine.setup({
             options = {
                 icons_enabled = true,
@@ -48,7 +52,18 @@ return {
                 lualine_z = {},
             },
             tabline = {},
-            winbar = {},
+            winbar = {
+                lualine_c = {
+                    {
+                        function()
+                            return navic.get_location()
+                        end,
+                        cond = function()
+                            return navic.is_available()
+                        end,
+                    },
+                },
+            },
             inactive_winbar = {},
             extensions = {},
         })
