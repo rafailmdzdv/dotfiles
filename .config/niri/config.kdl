@@ -61,6 +61,7 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "swww img ~/.config/wallpapers/fireplace.gif --transition-type outer --transition-pos 0.854,0.977"
 spawn-at-startup "exec swaync &"
+spawn-at-startup "exec fcitx5 &"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot_from_%Y-%m-%d_%H-%M-%S.png"
 
@@ -70,7 +71,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="zen" title="^Picture-in-Picture$"
+    match app-id="firefox" title="^Picture-in-Picture$"
     open-floating true
     open-focused false
     max-width 700
@@ -103,7 +104,7 @@ binds {
 
     Mod+T hotkey-overlay-title="Kitty" { spawn "kitty"; }
     Mod+Return hotkey-overlay-title="Lock" { spawn "swaylock-fancy"; }
-    Mod+W hotkey-overlay-title="Zen Browser" { spawn "zen"; }
+    Mod+W hotkey-overlay-title="Firefox" { spawn "firefox"; }
     Mod+Backspace hotkey-overlay-title="Power menu" { spawn "~/.config/waybar/scripts/power-menu/powermenu.sh"; }
     Mod+A hotkey-overlay-title="Application launcher" { spawn "rofi" "-show" "drun"; }
 
