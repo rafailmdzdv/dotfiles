@@ -1,11 +1,11 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: JetBrainsMono Nerd Font;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.2);
   color: #DDD8BB;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -20,7 +20,7 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-  padding: 0 5px;
+  padding: 0 6px;
   color: #DDD8BB;
   background-color: transparent;
   /* Use box-shadow instead of border so the text isn't offset */
@@ -84,7 +84,7 @@ window#waybar.empty #window {
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
-  padding: 0 10px;
+  padding: 0px 10px;
   color: #7eb3c9;
   /* color: #e46a78; */
   border-radius: 9.5px;

@@ -1,5 +1,5 @@
 {
-    "height": 33, // Waybar height (to be removed for auto height)
+    "height": 20, // Waybar height (to be removed for auto height)
     "layer": "top", // Waybar at top layer
     "margin-top": 6,
     "margin-left": 10,
@@ -66,7 +66,7 @@
         "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh",
     },
     "custom/launcher": {
-        "format": " <span size='x-large' color='#7eb3c9'>󱄅 </span>",
+        "format": " <span size='x-large' color='#7eb3c9'>󰣨 </span>",
         "on-click": "rofi -show drun",
     },
     "custom/media": {
