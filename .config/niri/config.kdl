@@ -56,6 +56,7 @@ layout {
     }
 }
 
+spawn-at-startup "gentoo-pipewire-launcher"
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swww-daemon"
@@ -102,7 +103,7 @@ binds {
 
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Kitty" { spawn "kitty"; }
+    Mod+T hotkey-overlay-title="Kitty" { spawn "alacritty"; }
     Mod+Return hotkey-overlay-title="Lock" { spawn "swaylock-fancy"; }
     Mod+W hotkey-overlay-title="Firefox" { spawn "firefox"; }
     Mod+Backspace hotkey-overlay-title="Power menu" { spawn "~/.config/waybar/scripts/power-menu/powermenu.sh"; }
