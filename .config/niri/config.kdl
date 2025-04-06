@@ -102,7 +102,7 @@ binds {
 
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Kitty" { spawn "alacritty"; }
+    Mod+T hotkey-overlay-title="Alacritty" { spawn "alacritty"; }
     Mod+Return hotkey-overlay-title="Lock" { spawn "swaylock-fancy"; }
     Mod+W hotkey-overlay-title="Firefox" { spawn "firefox"; }
     Mod+Backspace hotkey-overlay-title="Power menu" { spawn "~/.config/waybar/scripts/power-menu/powermenu.sh"; }
@@ -257,4 +257,8 @@ binds {
 
 environment {
     DISPLAY ":0"
+}
+
+cursor {
+  xcursor-theme "ArcStarry-cursors"
 }
