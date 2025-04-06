@@ -65,9 +65,25 @@ spawn-at-startup "fcitx5"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot_from_%Y-%m-%d_%H-%M-%S.png"
 
+workspace "term"
+workspace "browser"
+workspace "msg"
+
 window-rule {
   match app-id="Rofi"
   open-floating true
+}
+
+window-rule {
+  match app-id="Alacritty"
+  open-on-workspace "term"
+  open-maximized true
+}
+
+window-rule {
+  match app-id="firefox"
+  open-on-workspace "browser"
+  open-maximized true
 }
 
 window-rule {
@@ -77,6 +93,11 @@ window-rule {
     max-width 700
     max-height 400
     default-floating-position x=0 y=0 relative-to="top-right"
+}
+
+window-rule {
+  match app-id="telegram"
+  open-on-workspace "msg"
 }
 
 window-rule {
