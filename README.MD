@@ -1,7 +1,6 @@
 # Configuration
 
 - [Applications / Utils](https://github.com/rafailmdzdv/dotfiles/tree/master)
-- [NixOS](https://github.com/rafailmdzdv/dotfiles/tree/❄️nixos)
 - [Neovim](https://github.com/rafailmdzdv/dotfiles/tree/📝neovim)
 
 ![Image](https://github.com/user-attachments/assets/b69a67c6-d14e-40d5-908b-ad4ae6660d6b)
