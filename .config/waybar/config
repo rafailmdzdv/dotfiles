@@ -1,5 +1,5 @@
 {
-    "height": 20, // Waybar height (to be removed for auto height)
+    "height": 28, // Waybar height (to be removed for auto height)
     "layer": "top", // Waybar at top layer
     "margin-top": 6,
     "margin-left": 10,
@@ -70,13 +70,12 @@
         "on-click": "rofi -show drun",
     },
     "custom/media": {
-        "format": "{icon} {text}",
         "return-type": "json",
         "format-icons": {
             "Playing": " ",
             "Paused": " ",
         },
-        "max-length":70,
+        "max-length": 70,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
