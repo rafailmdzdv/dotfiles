@@ -1,8 +1,7 @@
 input {
     keyboard {
         xkb {
-            layout "us,ru"
-            options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+            layout "us"
         }
     }
 
@@ -62,7 +61,7 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "swww img ~/.config/wallpapers/fireplace.gif --transition-type outer --transition-pos 0.854,0.977"
 spawn-at-startup "exec swaync &"
-spawn-at-startup "exec fcitx5 &"
+spawn-at-startup "fcitx5"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot_from_%Y-%m-%d_%H-%M-%S.png"
 
