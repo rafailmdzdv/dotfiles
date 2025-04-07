@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Current Theme
-dir="~/.config/waybar/scripts/power-menu/"
+dir="~/.config/rofi/powermenu/"
 theme='style'
 
 # CMDs
@@ -53,9 +53,9 @@ run_cmd() {
   selected="$(confirm_exit)"
   if [[ "$selected" == "$yes" ]]; then
     if [[ $1 == '--shutdown' ]]; then
-      systemctl poweroff
+      sudo poweroff
     elif [[ $1 == '--reboot' ]]; then
-      systemctl reboot
+      sudo reboot
     elif [[ $1 == '--suspend' ]]; then
       mpc -q pause
       amixer set Master mute
