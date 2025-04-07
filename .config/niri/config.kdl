@@ -129,6 +129,7 @@ binds {
     Mod+Backspace hotkey-overlay-title="Power menu" { spawn "~/.config/rofi/powermenu/powermenu.sh"; }
     Mod+S hotkey-overlay-title="Audio control" { spawn "~/.config/rofi/sound/wireplumber_audio_switcher.py"; }
     Mod+A hotkey-overlay-title="Application launcher" { spawn "rofi" "-show" "drun"; }
+    Mod+Alt+L hotkey-overlay-title="Lock screen" { spawn "gtklock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+" "--limit" "1"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"; }
