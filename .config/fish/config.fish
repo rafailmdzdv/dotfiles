@@ -31,4 +31,6 @@ alias ll "eza --icons --long"
 
 set -x STARSHIP_CONFIG "$HOME/.config/starship/starship.toml"
 
+fish_vi_key_bindings
+
 starship init fish | source

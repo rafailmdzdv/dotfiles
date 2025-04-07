@@ -1,9 +1,13 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = "$character"
+format = "$username $character"
 right_format = "$all"
 
 add_newline = true
+
+[username]
+show_always = true
+format = "[$user]($style)"
 
 [character]
 success_symbol = "[;- >](bold green)"
