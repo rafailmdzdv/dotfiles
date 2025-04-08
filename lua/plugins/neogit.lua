@@ -8,4 +8,7 @@ return {
     config = function()
         require("neogit").setup()
     end,
+    keys = {
+        { "<leader>ng", "<cmd>Neogit<CR>", desc = "Neogit" },
+    },
 }
