@@ -41,7 +41,7 @@ return {
                 "ts_ls",
                 "nixd",
                 "html",
-                "cssls"
+                "cssls",
             }
             for _, lsp in ipairs(lsprotocols) do
                 lspconfig[lsp].setup({
@@ -78,6 +78,9 @@ return {
         config = function()
             local cmp = require("cmp")
             cmp.setup({
+                completion = {
+                    autocomplete = false,
+                },
                 snippet = {
                     expand = function(args)
                         require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
