@@ -59,9 +59,10 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "gentoo-pipewire-launcher"
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
-spawn-at-startup "swww img ~/.config/wallpapers/fireplace.gif --transition-type outer --transition-pos 0.854,0.977"
-spawn-at-startup "exec swaync &"
+spawn-at-startup "swww img ~/Downloads/gorod-vecher-zakat-nebo-oblaka-1071.jpg   --transition-type outer --transition-pos 0.854,0.977"
+spawn-at-startup "dunst"
 spawn-at-startup "fcitx5"
+spawn-at-startup ""
 
 screenshot-path "~/Pictures/Screenshots/Screenshot_from_%Y-%m-%d_%H-%M-%S.png"
 
@@ -78,6 +79,7 @@ window-rule {
   match app-id="Alacritty"
   open-on-workspace "term"
   open-maximized true
+  draw-border-with-background false
 }
 
 window-rule {
