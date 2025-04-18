@@ -34,4 +34,4 @@ opacity = 0.75
 [general]
 live_config_reload = true
 
-import = ["~/.config/alacritty/colorschemes/korea-lights.toml"]
+import = ["~/.config/alacritty/colorschemes/rose-pine-moon.toml"]
