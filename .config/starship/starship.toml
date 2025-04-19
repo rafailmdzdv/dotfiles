@@ -1,9 +1,12 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = "$username $character"
+format = "$username $python $character"
 right_format = "$all"
 
 add_newline = true
+
+[python]
+format = '[\($virtualenv $version\)](green)'
 
 [username]
 show_always = true
