@@ -62,7 +62,7 @@ spawn-at-startup "swww-daemon"
 spawn-at-startup "swww img ~/Downloads/gorod-vecher-zakat-nebo-oblaka-1071.jpg   --transition-type outer --transition-pos 0.854,0.977"
 spawn-at-startup "dunst"
 spawn-at-startup "fcitx5"
-spawn-at-startup ""
+spawn-at-startup "blueman-applet"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot_from_%Y-%m-%d_%H-%M-%S.png"
 
