@@ -6,7 +6,7 @@ right_format = "$all"
 add_newline = true
 
 [python]
-format = '[\($virtualenv $version\)](green)'
+format = '[(\($virtualenv\))](green)'
 
 [username]
 show_always = true
