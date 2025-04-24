@@ -10,5 +10,6 @@ return {
     end,
     keys = {
         { "<leader>ng", "<cmd>Neogit<CR>", desc = "Neogit" },
+        { "<leader>dvc", "<cmd>DiffviewClose<CR>", desc = "Diffview Close" },
     },
 }
