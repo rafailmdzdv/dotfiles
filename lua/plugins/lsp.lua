@@ -73,11 +73,13 @@ return {
             "hrsh7th/cmp-cmdline",
             "hrsh7th/nvim-cmp",
             "L3MON4D3/LuaSnip",
+            "rafamadriz/friendly-snippets",
             "saadparwaiz1/cmp_luasnip",
         },
-        config = function()
+        opts = function()
             local cmp = require("cmp")
-            cmp.setup({
+            require("luasnip.loaders.from_vscode").lazy_load()
+            local opts = {
                 completion = {
                     autocomplete = false,
                 },
@@ -99,7 +101,8 @@ return {
                 }, {
                     { name = "buffer" },
                 }),
-            })
+            }
+            return opts
         end,
     },
 }
