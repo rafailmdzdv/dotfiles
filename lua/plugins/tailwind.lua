@@ -5,7 +5,5 @@ return {
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
     },
-    config = function()
-        require("tailwind-tools").setup()
-    end,
+    config = true,
 }

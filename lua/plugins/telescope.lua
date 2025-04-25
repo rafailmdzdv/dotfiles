@@ -1,14 +1,14 @@
 return {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-        local normal = "n"
-        local map = vim.keymap.set
+    config = true,
+    keys = function()
         local builtin = require("telescope.builtin")
-
-        map(normal, "<leader>ff", builtin.find_files)
-        map(normal, "<leader>fs", builtin.grep_string)
-        map(normal, "<leader>fg", builtin.live_grep)
-        map(normal, "<leader>gf", builtin.git_files)
+        return {
+            { "<leader>ff", builtin.find_files },
+            { "<leader>fs", builtin.grep_string },
+            { "<leader>fg", builtin.live_grep },
+            { "<leader>gf", builtin.git_files },
+        }
     end,
 }

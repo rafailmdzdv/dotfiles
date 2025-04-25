@@ -2,17 +2,15 @@ return {
     {
         "echasnovski/mini.pairs",
         version = "*",
-        config = function()
-            require("mini.pairs").setup()
-        end,
+        config = true,
     },
 
     {
         "echasnovski/mini.hipatterns",
         version = "*",
-        config = function()
+        opts = function()
             local hipatterns = require("mini.hipatterns")
-            hipatterns.setup({
+            local opts = {
                 highlighters = {
                     fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
                     hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
@@ -22,7 +20,8 @@ return {
                     hex_color = hipatterns.gen_highlighter.hex_color(),
                     extmark_opts = { priority = 2000 },
                 },
-            })
+            }
+            return opts
         end,
     },
 }

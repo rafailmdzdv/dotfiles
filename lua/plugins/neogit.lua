@@ -5,9 +5,7 @@ return {
         "sindrets/diffview.nvim",
         "nvim-telescope/telescope.nvim",
     },
-    config = function()
-        require("neogit").setup()
-    end,
+    config = true,
     keys = {
         { "<leader>ng", "<cmd>Neogit<CR>", desc = "Neogit" },
         { "<leader>dvc", "<cmd>DiffviewClose<CR>", desc = "Diffview Close" },
