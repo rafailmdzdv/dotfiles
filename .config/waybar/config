@@ -14,7 +14,7 @@
       "on-click": "activate",
       "format-icons": {
         "term": ">_",
-        "browser": " ",
+        "browser": "󰖟 ",
         "msg": " ",
         "4": " ",
         "5": " ",

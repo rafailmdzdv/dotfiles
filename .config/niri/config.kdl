@@ -55,8 +55,8 @@ layout {
     }
 }
 
-spawn-at-startup "xwayland-satellite"
 spawn-at-startup "gentoo-pipewire-launcher"
+spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "swww img ~/Downloads/gorod-vecher-zakat-nebo-oblaka-1071.jpg   --transition-type outer --transition-pos 0.854,0.977"
@@ -83,13 +83,13 @@ window-rule {
 }
 
 window-rule {
-  match app-id="firefox"
+  match app-id="zen"
   open-on-workspace "browser"
   open-maximized true
 }
 
 window-rule {
-    match app-id="firefox" title="^Picture-in-Picture$"
+    match app-id="zen" title="^Picture-in-Picture$"
     open-floating true
     open-focused false
     max-width 700
@@ -127,7 +127,7 @@ binds {
 
     Mod+T hotkey-overlay-title="Alacritty" { spawn "alacritty"; }
     Mod+Return hotkey-overlay-title="Lock" { spawn "swaylock-fancy"; }
-    Mod+W hotkey-overlay-title="Firefox" { spawn "firefox"; }
+    Mod+W hotkey-overlay-title="Zen Browser" { spawn "zen"; }
     Mod+Backspace hotkey-overlay-title="Power menu" { spawn "~/.config/rofi/powermenu/powermenu.sh"; }
     Mod+S hotkey-overlay-title="Audio control" { spawn "~/.config/rofi/sound/wireplumber_audio_switcher.py"; }
     Mod+A hotkey-overlay-title="Application launcher" { spawn "rofi" "-show" "drun"; }
