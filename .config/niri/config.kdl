@@ -287,3 +287,7 @@ environment {
 cursor {
   xcursor-theme "ArcStarry-cursors"
 }
+
+debug {
+  wait-for-frame-completion-in-pipewire
+}
