@@ -32,7 +32,7 @@ size = 16
 dynamic_padding = true
 padding = { x = 5, y = 5 }
 decorations = "none"
-opacity = 0.75
+opacity = 0.82
 
 [general]
 live_config_reload = true
