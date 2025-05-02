@@ -53,9 +53,9 @@ run_cmd() {
   selected="$(confirm_exit)"
   if [[ "$selected" == "$yes" ]]; then
     if [[ $1 == '--shutdown' ]]; then
-      sudo poweroff
+      poweroff
     elif [[ $1 == '--reboot' ]]; then
-      sudo reboot
+      reboot
     elif [[ $1 == '--suspend' ]]; then
       mpc -q pause
       amixer set Master mute

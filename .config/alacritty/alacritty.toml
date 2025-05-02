@@ -25,6 +25,9 @@ style = "Italic"
 family = "Hack Nerd Font"
 style = "Regular"
 
+[font]
+size = 16
+
 [window]
 dynamic_padding = true
 padding = { x = 5, y = 5 }
