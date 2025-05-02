@@ -10,6 +10,7 @@ local options = {
     autoindent = true,
     smartindent = true,
     ignorecase = true,
+    colorcolumn = "80",
 }
 
 for key, value in pairs(options) do
