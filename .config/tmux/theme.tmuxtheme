@@ -1,1 +1,1 @@
-set -a status-style fg=#ffffff
+set -g status-style fg=#ffffff
