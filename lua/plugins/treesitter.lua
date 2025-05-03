@@ -25,6 +25,7 @@ return {
                     "nix",
                     "rust",
                     "html",
+                    "org",
                 },
                 sync_install = false,
                 auto_install = true,
