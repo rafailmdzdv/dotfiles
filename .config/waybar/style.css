@@ -1,28 +1,27 @@
+@import "./rose-pine-colors.css";
+
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: JetBrainsMono Nerd Font;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #DDD8BB;
+  background-color: @base;
+  color: @text;
   transition-property: background-color;
   transition-duration: 0.5s;
   border-top: 8px transparent;
-  border-radius: 8px;
+  border-radius: 3px;
   transition-duration: 0.5s;
   margin: 16px 16px;
 }
 
-window#waybar.hidden {
-  opacity: 0.2;
-}
-
 #workspaces button {
-  padding: 0 6px;
-  color: #DDD8BB;
-  background-color: transparent;
+  padding: 0 8px;
+  color: @text;
+  /* background-color: @base; */
+  background-color: @base;
   /* Use box-shadow instead of border so the text isn't offset */
   box-shadow: inset 0 -3px transparent;
   /* Avoid rounded borders under each workspace name */
@@ -31,19 +30,19 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-  color: #e46a78;
+  color: @love;
 }
 
 #workspaces button.active {
-  color: #98BC6D;
+  color: @gold;
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: @love;
 }
 
 #window {
-  color: #DDD8BB;
+  color: @text;
   padding: 0 5px;
 }
 
@@ -52,7 +51,7 @@ window#waybar.empty #window {
 }
 
 #window label {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #clock,
@@ -85,25 +84,24 @@ window#waybar.empty #window {
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
   padding: 0px 10px;
-  color: #7eb3c9;
-  /* color: #e46a78; */
-  border-radius: 9.5px;
-  background-color: #1f1f28;
+  color: @foam;
+  border-radius: 3px;
+  background-color: @base;
 }
 
 #window,
 #workspaces {
   margin: 0 4px;
   border-radius: 7.8px;
-  background-color: #1f1f28;
+  background-color: @base;
 }
 
 #cpu {
-  color: #e46a78;
+  color: @love;
 }
 
 #memory {
-  color: #e5c283;
+  color: @gold;
 }
 
 #custom-power-menu {
@@ -113,8 +111,8 @@ window#waybar.empty #window {
 }
 
 #custom-launcher {
-  background-color: #1f1f28;
-  color: #7eb3c9;
+  background-color: @base;
+  color: @pine;
   border-radius: 7.5px;
   padding: 0 3px;
 }
@@ -161,7 +159,7 @@ window#waybar.empty #window {
 }
 
 #pulseaudio {
-  color: #7eb3c9;
+  color: @pine;
 }
 
 #backlight {
@@ -170,7 +168,7 @@ window#waybar.empty #window {
 }
 
 #clock {
-  color: #e46a78;
+  color: @iris;
   /* background-color: #14141e; */
 }
 
@@ -211,34 +209,34 @@ label:focus {
 }
 
 #bluetooth {
-  color: #707d9d;
+  color: @pine;
 }
 
 #bluetooth.disconnected {
-  color: #f53c3c;
+  color: @love;
 }
 
 #network {
-  color: #957FB8;
+  color: @rose;
 }
 
 #network.disconnected {
-  color: #f53c3c;
+  color: @love;
 }
 
 #custom-media {
-  background-color: #1f1f28;
-  color: #DDD8BB;
+  background-color: @base;
+  color: @text;
   min-width: 100px;
   font-size: 13px;
 }
 
 #custom-media.custom-spotify {
-  background-color: #1f1f28;
+  background-color: @base;
 }
 
 #custom-media.custom-vlc {
-  background-color: #1f1f28;
+  background-color: @base;
 }
 
 #temperature {
@@ -315,5 +313,6 @@ label:focus {
 }
 
 #custom-media {
-  background-color: #1f1f28;
+  background-color: @base;
+  font-size: 12px;
 }

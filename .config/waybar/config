@@ -1,14 +1,11 @@
 {
     "height": 28, // Waybar height (to be removed for auto height)
     "layer": "top", // Waybar at top layer
-    "margin-top": 6,
-    "margin-left": 10,
-    "margin-bottom": 0,
-    "margin-right": 10,
     "spacing": 5, // Gaps between modules (4px)
-    "modules-left": ["custom/launcher", "cpu", "memory", "niri/workspaces", "custom/media"],
-    "modules-center": ["niri/window"],
+    "modules-left": ["custom/launcher", "cpu", "memory", "niri/workspaces", "niri/window"],
+    "modules-center": ["custom/media", "custom/media-length"],
     "modules-right": ["tray", "pulseaudio", "network", "clock", "custom/power-menu"],
+    "reload_style_on_change": true,
     "niri/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
@@ -27,7 +24,7 @@
         "spacing": 10
     },
     "clock": {
-        "format": "<span color='#bf616a'> </span>{:%d.%m  %H:%M (%a)}",
+        "format": "<span> </span>{:%d.%m  %H:%M (%a)}",
 	"tooltip-format": "<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
@@ -57,7 +54,7 @@
         "format-icons": {
             "default": ["", "", ""]
         },
-	"on-click": "alacritty -e alsamixer"
+        "on-click": "alacritty -e alsamixer"
     },
     "bluetooth": {
         "on-click": "~/.config/waybar/scripts/rofi-bluetooth &",
@@ -68,7 +65,7 @@
         "on-click": "bash ~/.config/rofi/powermenu/powermenu.sh",
     },
     "custom/launcher": {
-        "format": " <span size='x-large' color='#7eb3c9'> </span>",
+        "format": " <span size='x-large'> </span>",
         "on-click": "rofi -show drun",
     },
     "custom/media": {
@@ -83,4 +80,9 @@
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
     },
+    "custom/media-length": {
+        "return-type": "json",
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{duration(position)}}\"}'",
+        "interval": 1
+    }
 }
