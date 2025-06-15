@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+import subprocess
+import sys
+
+TRANSITION_POS = ('0.854', '0.977')
+
+
+def main() -> None:
+    if len(sys.argv) < 2:
+        raise ValueError('Provide wallpaper path.')
+
+    wallpaper_path = sys.argv[1]
+
+    subprocess.run(
+        'swww img {} --transition-type outer --transition-pos {}'.format(
+            wallpaper_path,
+            ','.join(TRANSITION_POS),
+        ),
+        shell=True,
+    )
+
+
+if __name__ == '__main__':
+    main()

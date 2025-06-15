@@ -51,13 +51,11 @@ layout {
     }
 }
 
-spawn-at-startup "gentoo-pipewire-launcher"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
 spawn-at-startup "swaync"
 spawn-at-startup "swww-daemon"
-spawn-at-startup "swww img ~/Downloads/gorod-vecher-zakat-nebo-oblaka-1071.jpg   --transition-type outer --transition-pos 0.854,0.977"
-spawn-at-startup "dunst"
+spawn-at-startup "wallpchange ~/Изображения/ocean_with_cloud.png"
 spawn-at-startup "fcitx5"
 spawn-at-startup "blueman-applet"
 
@@ -126,7 +124,8 @@ binds {
     Mod+Return hotkey-overlay-title="Lock" { spawn "swaylock-fancy"; }
     Mod+W hotkey-overlay-title="Zen Browser" { spawn "zen-browser"; }
     Mod+Backspace hotkey-overlay-title="Power menu" { spawn "~/.config/rofi/powermenu/powermenu.sh"; }
-    Mod+S hotkey-overlay-title="Audio control" { spawn "alacritty -e alsamixer"; }
+    Mod+S hotkey-overlay-title="Audio control" { spawn "alacritty" "-e" "alsamixer"; }
+    Mod+Alt+S hotkey-overlay-title="Audio control menu" { spawn "~/.config/rofi/sound/wireplumber_audio_switcher.py"; }
     Mod+A hotkey-overlay-title="Application launcher" { spawn "rofi" "-show" "drun"; }
     Mod+Alt+L hotkey-overlay-title="Lock screen" { spawn "swaylock"; }
 
@@ -283,7 +282,7 @@ environment {
 }
 
 cursor {
-  xcursor-theme "ArcStarry-cursors"
+  xcursor-theme "Adwaita"
 }
 
 debug {
