@@ -17,6 +17,7 @@ output "HDMI-A-1" {
 }
 
 layout {
+    background-color "transparent"
     gaps 12
     center-focused-column "never"
 
@@ -48,6 +49,17 @@ layout {
         spread 5
         offset x=0 y=5
         color "#0007"
+    }
+}
+
+layer-rule {
+    match namespace="^swww-daemon$"
+    place-within-backdrop true
+}
+
+overview {
+    workspace-shadow {
+        off
     }
 }
 
