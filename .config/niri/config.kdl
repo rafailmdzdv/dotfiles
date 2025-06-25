@@ -67,7 +67,7 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
 spawn-at-startup "swaync"
 spawn-at-startup "swww-daemon"
-spawn-at-startup "wallpchange ~/Изображения/ocean_with_cloud.png"
+spawn-at-startup "wallpchange ~/Изображения/power-poles-purple-sky-pixel-moewalls-com.gif"
 spawn-at-startup "fcitx5"
 spawn-at-startup "blueman-applet"
 
