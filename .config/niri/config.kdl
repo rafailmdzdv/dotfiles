@@ -83,7 +83,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id="Alacritty"
+  match app-id="kitty"
   open-on-workspace "term"
   open-maximized true
   draw-border-with-background false
@@ -132,7 +132,7 @@ binds {
 
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Alacritty" { spawn "alacritty"; }
+    Mod+T hotkey-overlay-title="Kitty" { spawn "kitty"; }
     Mod+Return hotkey-overlay-title="Lock" { spawn "swaylock-fancy"; }
     Mod+W hotkey-overlay-title="Zen Browser" { spawn "zen-browser"; }
     Mod+Backspace hotkey-overlay-title="Power menu" { spawn "~/.config/rofi/powermenu/powermenu.sh"; }
