@@ -1,0 +1,54 @@
+{
+  "position": "bottom",
+  "height": 35,
+  "start": [
+    {
+      "type": "workspaces",
+      "name_map": {
+        "term": ">_",
+        "browser": "󰖟 ",
+        "msg": " ",
+        "4": " "
+      }
+    },
+    {
+      "type": "sys_info",
+      "format": [
+        "  {cpu_percent}%",
+        "  {memory_used}%"
+      ]
+    },
+    {
+      "type": "focused",
+      "show_icon": false
+    }
+  ],
+  "center": [
+    {
+      "type": "music"
+    }
+  ],
+  "end": [
+    {
+      "type": "tray"
+    },
+    {
+      "type": "volume"
+    },
+    {
+      "type": "clock",
+      "format": "%d.%m\n%H:%M"
+    },
+    {
+      "bar": [
+        {
+          "on_click": "!bash ~/.config/rofi/powermenu/powermenu.sh",
+          "label": "⏻",
+          "name": "power_button",
+          "type": "button"
+        }
+      ],
+      "type": "custom"
+    }
+  ]
+}
