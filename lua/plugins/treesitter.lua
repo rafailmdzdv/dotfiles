@@ -3,6 +3,15 @@ return {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         init = function()
+            local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+            parser_config.org = {
+                install_info = {
+                    url = "https://github.com/milisims/tree-sitter-org",
+                    revision = "main",
+                    files = { "src/parser.c", "src/scanner.c" },
+                },
+                filetype = "org",
+            }
             local opts = {
                 ensure_installed = {
                     "c",
@@ -16,6 +25,7 @@ return {
                     "nix",
                     "rust",
                     "html",
+                    "org",
                 },
                 sync_install = false,
                 auto_install = true,
