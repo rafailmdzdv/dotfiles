@@ -42,6 +42,7 @@ return {
                 "nixd",
                 "html",
                 "cssls",
+                "gopls",
             }
             for _, lsp in ipairs(lsprotocols) do
                 lspconfig[lsp].setup({
