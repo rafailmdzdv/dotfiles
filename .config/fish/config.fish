@@ -28,6 +28,7 @@ alias xcopy "xclip -selection clipboard"
 alias tmuxvert "tmux split-window -h -c '#{pane_current_path}'"
 alias l "eza --icons --all --long"
 alias ll "eza --icons --long"
+alias task "go-task"
 
 set -x STARSHIP_CONFIG "$HOME/.config/starship/starship.toml"
 
