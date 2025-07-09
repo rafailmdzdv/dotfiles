@@ -2,39 +2,40 @@
     link:
       create: true
       glob: true
+      force: true
 
 - clean: ['~']
 
 - link:
-    .config/alacritty/:
+    ~/.config/alacritty/:
       path: .config/alacritty/*
-    .config/cava/:
+    ~/.config/cava/:
       path: .config/cava/*
-    .config/fcitx5/:
+    ~/.config/fcitx5/:
       path: .config/fcitx5/*
-    .config/fish/:
+    ~/.config/fish/:
       path: .config/fish/*
-    .config/fzf/:
+    ~/.config/fzf/:
       path: .config/fzf/*
-    .config/ironbar/:
+    ~/.config/ironbar/:
       path: .config/ironbar/*
-    .config/kitty/:
+    ~/.config/kitty/:
       path: .config/kitty/*
-    .config/niri/:
+    ~/.config/niri/:
       path: .config/niri/*
-    .config/omf/:
+    ~/.config/omf/:
       path: .config/omf/*
-    .config/rofi/:
+    ~/.config/rofi/:
       path: .config/rofi/*
-    .config/scripts/:
+    ~/.config/scripts/:
       path: .config/scripts/*
-    .config/starship/:
+    ~/.config/starship/:
       path: .config/starship/*
-    .config/swaylock/:
+    ~/.config/swaylock/:
       path: .config/swaylock/*
-    .config/swaync/:
+    ~/.config/swaync/:
       path: .config/swaync/*
-    .config/tmux/:
+    ~/.config/tmux/:
       path: .config/tmux/*
-    .config/wallpapers/:
+    ~/.config/wallpapers/:
       path: .config/wallpapers/*
