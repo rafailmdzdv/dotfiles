@@ -1,0 +1,40 @@
+- defaults:
+    link:
+      create: true
+      glob: true
+
+- clean: ['~']
+
+- link:
+    .config/alacritty/:
+      path: .config/alacritty/*
+    .config/cava/:
+      path: .config/cava/*
+    .config/fcitx5/:
+      path: .config/fcitx5/*
+    .config/fish/:
+      path: .config/fish/*
+    .config/fzf/:
+      path: .config/fzf/*
+    .config/ironbar/:
+      path: .config/ironbar/*
+    .config/kitty/:
+      path: .config/kitty/*
+    .config/niri/:
+      path: .config/niri/*
+    .config/omf/:
+      path: .config/omf/*
+    .config/rofi/:
+      path: .config/rofi/*
+    .config/scripts/:
+      path: .config/scripts/*
+    .config/starship/:
+      path: .config/starship/*
+    .config/swaylock/:
+      path: .config/swaylock/*
+    .config/swaync/:
+      path: .config/swaync/*
+    .config/tmux/:
+      path: .config/tmux/*
+    .config/wallpapers/:
+      path: .config/wallpapers/*

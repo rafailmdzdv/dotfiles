@@ -1,0 +1,14 @@
+#+TITLE: dotfiles
+* Install
+#+BEGIN_SRC shell
+$ ./install
+#+END_SRC
+
+* Preview
+- [[https://github.com/rafailmdzdv/dotfiles/tree/master][Applications / Utils]]
+- [[https://github.com/rafailmdzdv/dotfiles/tree/📝neovim][Neovim]]
+
+[[https://github.com/user-attachments/assets/b69a67c6-d14e-40d5-908b-ad4ae6660d6b]]
+
+new conf without wallpapers
+[[https://github.com/user-attachments/assets/94079af0-250d-4a9b-8bc3-d1617d8c9583]]
