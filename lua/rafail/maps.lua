@@ -6,7 +6,7 @@ local m = {
 local set_map = vim.keymap.set
 
 -- Normal
-set_map(m.n, "<leader>pf", vim.cmd.Ex)
+-- set_map(m.n, "<leader>pf", vim.cmd.Ex)
 
 set_map(m.n, "<leader>q", vim.cmd.bd)
 
