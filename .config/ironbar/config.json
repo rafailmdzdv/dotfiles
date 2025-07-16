@@ -1,5 +1,5 @@
 {
-  "position": "bottom",
+  "position": "left",
   "height": 35,
   "start": [
     {
@@ -37,7 +37,8 @@
     },
     {
       "type": "clock",
-      "format": "%d.%m\n%H:%M"
+      "format": "%d.%m\n%H:%M",
+      "orientation": "h"
     },
     {
       "bar": [
@@ -45,7 +46,8 @@
           "on_click": "!bash ~/.config/rofi/powermenu/powermenu.sh",
           "label": "⏻",
           "name": "power_button",
-          "type": "button"
+          "type": "button",
+          "orientation": "h"
         }
       ],
       "type": "custom"

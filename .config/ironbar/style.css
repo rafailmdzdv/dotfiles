@@ -9,7 +9,7 @@ button {
 
 #bar {
   background: @base;
-  padding: 0 6px;
+  padding: 6px 0;
 }
 
 .workspaces .item.focused {
@@ -37,7 +37,7 @@ button {
 .volume,
 .focused,
 .sysinfo {
-  padding: 0 10px;
+  padding: 10px 0;
 }
 
 .tray,
