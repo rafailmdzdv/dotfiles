@@ -1,0 +1,67 @@
+{
+    "layer": "top",
+    "position": "left",
+    "output": "HDMI-A-2",
+    "spacing": 0,
+    "modules-left": [
+        "niri/workspaces",
+    ],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "niri/language",
+        "cpu",
+        "memory",
+        "pulseaudio",
+        "tray",
+    ],
+    "custom/logout": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "niri msg action quit"
+    },
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "term": "\uf120",
+            "browser": "\uf269",
+            "msg": "\uf2c6",
+            "default": "\uf111",
+        },
+    },
+    "niri/window": {
+        "separate-outputs": true,
+        "icon": true,
+        "icon-size": 16,
+    },
+    "niri/language": {
+        "format": "{shortDescription}",
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%e\n%m\n\n<b>%H\n%M</b>}"
+    },
+    "cpu": {
+        "format": "\uf4bc\n{usage}",
+        // "format": "{usage}",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "\uefc5\n{}"
+        // "format": "{}"
+    },
+    "pulseaudio": {
+        "format": "{icon}\n{volume}",
+        "format-icons": ["\uf026", "\uf027", "\uf028"],
+        "scroll-step": 2,
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "",
+        "format-disconnected": "⚠",
+    }
+}

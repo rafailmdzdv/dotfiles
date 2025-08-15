@@ -17,8 +17,8 @@
       path: .config/fish/*
     ~/.config/fzf/:
       path: .config/fzf/*
-    ~/.config/ironbar/:
-      path: .config/ironbar/*
+    ~/.config/waybar/:
+      path: .config/waybar/*
     ~/.config/kitty/:
       path: .config/kitty/*
     ~/.config/niri/:

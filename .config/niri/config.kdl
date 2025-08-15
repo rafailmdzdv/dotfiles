@@ -64,7 +64,7 @@ overview {
 }
 
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "ironbar"
+spawn-at-startup "waybar"
 spawn-at-startup "swaync"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "wallpchange ~/Изображения/power-poles-purple-sky-pixel-moewalls-com.gif"
