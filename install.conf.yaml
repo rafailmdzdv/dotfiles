@@ -11,8 +11,6 @@
       path: .config/alacritty/*
     ~/.config/cava/:
       path: .config/cava/*
-    ~/.config/fcitx5/:
-      path: .config/fcitx5/*
     ~/.config/fish/:
       path: .config/fish/*
     ~/.config/fzf/:
