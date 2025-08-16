@@ -1,6 +1,7 @@
 #+TITLE: dotfiles
 * Install
 #+BEGIN_SRC shell
+$ paru -S rose-pine-gtk-theme-full
 $ ./install
 #+END_SRC
 
