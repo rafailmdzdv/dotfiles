@@ -45,3 +45,5 @@
       path: .config/yandex-music.conf
     ~/.config/wlogout/:
       path: .config/wlogout/*
+    ~/.config/btop/:
+      path: .config/btop/*
