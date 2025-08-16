@@ -3,7 +3,7 @@ commands=(
     "waybar"
     "swaync"
     "swww-daemon"
-    "wallpchange ~/Изображения/power-poles-purple-sky-pixel-moewalls-com.gif"
+    "wallpchange ~/.config/wallpapers/wallpaper_4.png"
     "blueman-applet"
 )
 

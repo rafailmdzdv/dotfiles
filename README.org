@@ -9,7 +9,4 @@ $ ./install
 - [[https://github.com/rafailmdzdv/dotfiles/tree/master][Applications / Utils]]
 - [[https://github.com/rafailmdzdv/dotfiles/tree/📝neovim][Neovim]]
 
-#+HTML: <img src="https://github.com/user-attachments/assets/b69a67c6-d14e-40d5-908b-ad4ae6660d6b" />
-
-new conf without wallpapers
-#+HTML: <img src="https://github.com/user-attachments/assets/94079af0-250d-4a9b-8bc3-d1617d8c9583" />
+#+HTML: <img src="https://github.com/user-attachments/assets/2372ca05-b5e3-46f4-9543-683d430fb837" />
