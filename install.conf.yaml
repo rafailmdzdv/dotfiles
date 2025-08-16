@@ -37,3 +37,9 @@
       path: .config/tmux/*
     ~/.config/wallpapers/:
       path: .config/wallpapers/*
+    ~/.config/gtk-3.0/:
+      path: .config/gtk-3.0/*
+    ~/.config/gtk-4.0/:
+      path: .config/gtk-4.0/*
+    ~/.config/yandex-music.conf:
+      path: .config/yandex-music.conf
