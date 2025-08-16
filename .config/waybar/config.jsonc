@@ -25,7 +25,7 @@
     "niri/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "term": "\uf120",
+            "term": "\ue795",
             "browser": "\uf269",
             "msg": "\uf2c6",
             "default": "\uf111",
