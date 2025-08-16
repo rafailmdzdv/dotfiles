@@ -130,10 +130,9 @@ binds {
     Mod+T hotkey-overlay-title="Kitty" { spawn "kitty"; }
     Mod+Return hotkey-overlay-title="Lock" { spawn "swaylock-fancy"; }
     Mod+W hotkey-overlay-title="Zen Browser" { spawn "zen-browser"; }
-    Mod+Backspace hotkey-overlay-title="Power menu" { spawn "~/.config/rofi/powermenu/powermenu.sh"; }
+    Mod+Backspace hotkey-overlay-title="Power menu" { spawn "wlogout"; }
     Mod+S hotkey-overlay-title="Audio control" { spawn "alacritty" "-e" "alsamixer"; }
-    Mod+Alt+S hotkey-overlay-title="Audio control menu" { spawn "~/.config/rofi/sound/wireplumber_audio_switcher.py"; }
-    Mod+A hotkey-overlay-title="Application launcher" { spawn "rofi" "-show" "drun"; }
+    Mod+A hotkey-overlay-title="Application launcher" { spawn "rofi" "-show" "drun" "-display-drun" ""; }
     Mod+Alt+L hotkey-overlay-title="Lock screen" { spawn "swaylock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+" "--limit" "1"; }

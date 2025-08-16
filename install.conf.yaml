@@ -43,3 +43,5 @@
       path: .config/gtk-4.0/*
     ~/.config/yandex-music.conf:
       path: .config/yandex-music.conf
+    ~/.config/wlogout/:
+      path: .config/wlogout/*
