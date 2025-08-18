@@ -47,3 +47,5 @@
       path: .config/wlogout/*
     ~/.config/btop/:
       path: .config/btop/*
+    ~/.emacs.d/:
+      path: .emacs.d/*
