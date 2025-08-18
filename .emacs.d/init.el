@@ -65,11 +65,28 @@
 
 (use-package evil
   :ensure t)
+(setq x-select-enable-clipboard nil)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'rose-pine t)
 
 (evil-mode t)
+
+(setq wl-copy-process nil)
+(defun wl-copy (text)
+  (setq wl-copy-process (make-process :name "wl-copy"
+                                      :buffer nil
+                                      :command '("wl-copy" "-f" "-n")
+                                      :connection-type 'pipe
+                                      :noquery t))
+  (process-send-string wl-copy-process text)
+  (process-send-eof wl-copy-process))
+(defun wl-paste ()
+  (if (and wl-copy-process (process-live-p wl-copy-process))
+      nil ; should return nil if we're the current paste owner
+      (shell-command-to-string "wl-paste -n | tr -d \r")))
+(setq interprogram-cut-function 'wl-copy)
+(setq interprogram-paste-function 'wl-paste)
 
 ;;; -*- lexical-binding: t -*-
 (custom-set-variables
@@ -92,4 +109,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "#1F1D2E" :foreground "#e0def4" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :family "Maple Mono NF")))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "#1F1D2E" :foreground "#e0def4" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :family "Maple Mono NF"))))
+ '(lsp-headerline-breadcrumb-path-face ((t (:background "#191724"))))
+ '(lsp-headerline-breadcrumb-separator-face ((t (:background "#191724"))))
+ '(lsp-headerline-breadcrumb-symbols-face ((t (:background "#191724")))))
