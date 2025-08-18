@@ -68,7 +68,7 @@ spawn-at-startup "~/.config/scripts/startup.sh"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot_from_%Y-%m-%d_%H-%M-%S.png"
 
-workspace "term"
+workspace "code"
 workspace "browser"
 workspace "msg"
 
@@ -79,8 +79,8 @@ window-rule {
 
 window-rule {
   match app-id="kitty"
-  open-on-workspace "term"
-  open-maximized true
+  open-on-workspace "code"
+  open-maximized false
   draw-border-with-background false
 }
 
@@ -110,6 +110,12 @@ window-rule {
     default-floating-position x=0 y=0 relative-to="bottom-right"
 }
 
+window-rule {
+    match app-id="Emacs"
+    open-maximized true
+	open-on-workspace "code"
+}
+
 /-window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
@@ -127,8 +133,9 @@ binds {
 
     Mod+Shift+Slash { show-hotkey-overlay; }
 
+    Mod+Shift+E hotkey-overlay-title="Emacs" { spawn "env" "DISPLAY=:1" "emacs"; }
+    Mod+E hotkey-overlay-title="Files" { spawn "nautilus"; }
     Mod+T hotkey-overlay-title="Kitty" { spawn "kitty"; }
-    Mod+Return hotkey-overlay-title="Lock" { spawn "swaylock-fancy"; }
     Mod+W hotkey-overlay-title="Zen Browser" { spawn "zen-browser"; }
     Mod+Backspace hotkey-overlay-title="Power menu" { spawn "wlogout"; }
     Mod+S hotkey-overlay-title="Audio control" { spawn "alacritty" "-e" "alsamixer"; }
@@ -277,7 +284,7 @@ binds {
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Mod+Shift+E { quit; }
+    Mod+Shift+Backspace { quit; }
     Ctrl+Alt+Delete { quit; }
 
     Mod+Shift+P { power-off-monitors; }
