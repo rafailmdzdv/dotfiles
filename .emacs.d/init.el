@@ -6,7 +6,7 @@
 
 (use-package lsp-mode
   :ensure t
-  :hook (python-mode))
+  :hook (lsp-pyright yaml-mode))
 
 (use-package lsp-pyright
   :ensure t
@@ -14,6 +14,9 @@
   :hook (python-mode . (lambda ()
                           (require 'lsp-pyright)
                           (lsp))))  ; or lsp-deferred
+
+(use-package yaml-mode
+  :ensure t)
 
 (use-package lsp-ui
   :ensure t)
@@ -23,7 +26,7 @@
 
 (use-package tree-sitter
   :ensure t
-  :hook ((python-mode) . tree-sitter-hl-mode)
+  :hook ((lsp-pyright yaml-mode) . tree-sitter-hl-mode)
   :config
   (global-tree-sitter-mode))
 
