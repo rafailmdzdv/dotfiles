@@ -12,7 +12,7 @@
 
 (use-package lsp-mode
   :ensure t
-  :hook (lsp-pyright yaml-mode))
+  :hook (python-mode yaml-mode))
 
 (use-package lsp-pyright
   :ensure t
