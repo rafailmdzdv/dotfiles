@@ -80,6 +80,14 @@
   :config
   (global-colorful-mode t))
 
+(use-package org-alert
+  :ensure t
+  :custom
+  (org-alert-interval 60)
+  (alert-default-style 'libnotify)
+  :config
+  (org-alert-enable))
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'rose-pine t)
 
