@@ -1,5 +1,8 @@
 (setq-default indent-tabs-mode nil)
 
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
 
 (require 'package)
 (add-to-list 'package-archives
@@ -70,6 +73,13 @@
   :ensure t)
 (setq x-select-enable-clipboard nil)
 
+(use-package colorful-mode
+  :ensure t
+  :custom
+  (colorful-use-prefix t)
+  :config
+  (global-colorful-mode t))
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'rose-pine t)
 
@@ -99,10 +109,11 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("c4a66d0d9557de08eadd6cc25112bd7eb776d8c8754ed8cc4e1b16d0c317433c"
-	 default))
+     default))
  '(display-line-numbers 'relative)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
+ '(org-agenda-files '("~/orgfiles"))
  '(package-selected-packages nil)
  '(tab-bar-show t)
  '(tab-width 4)
