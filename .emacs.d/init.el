@@ -21,6 +21,13 @@
                           (require 'lsp-pyright)
                           (lsp))))  ; or lsp-deferred
 
+(use-package pyvenv
+  :ensure t
+  :defer t
+  :diminish
+  :config
+    (pyvenv-mode t))
+
 (use-package yaml-mode
   :ensure t)
 
@@ -122,6 +129,7 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(org-agenda-files '("~/orgfiles"))
+ '(org-export-backends '(ascii html icalendar latex md odt))
  '(package-selected-packages nil)
  '(tab-bar-show t)
  '(tab-width 4)

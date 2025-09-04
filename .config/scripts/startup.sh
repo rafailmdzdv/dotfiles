@@ -5,6 +5,7 @@ commands=(
     "swww-daemon"
     "wallpchange ~/.config/wallpapers/wallpaper_4.png"
     "blueman-applet"
+    "fcitx5"
 )
 
 for cmd in "${commands[@]}"
