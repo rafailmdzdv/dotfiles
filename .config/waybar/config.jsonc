@@ -11,6 +11,7 @@
         "custom/notification",
     ],
     "modules-right": [
+	"niri/language",
         "cpu",
         "memory",
         "pulseaudio",
