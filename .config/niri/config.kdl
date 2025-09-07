@@ -85,13 +85,13 @@ window-rule {
 }
 
 window-rule {
-  match app-id="zen"
+  match app-id="firefox"
   open-on-workspace "browser"
   open-maximized true
 }
 
 window-rule {
-    match app-id="zen" title="^Picture-in-Picture$"
+    match app-id="firefox" title="^Picture-in-Picture$"
     open-floating true
     open-focused false
     max-width 700
@@ -136,7 +136,7 @@ binds {
     Mod+Shift+E hotkey-overlay-title="Emacs" { spawn "env" "DISPLAY=:1" "emacs"; }
     Mod+E hotkey-overlay-title="Files" { spawn "nautilus"; }
     Mod+T hotkey-overlay-title="Kitty" { spawn "kitty"; }
-    Mod+W hotkey-overlay-title="Zen Browser" { spawn "zen-browser"; }
+    Mod+W hotkey-overlay-title="Firefox" { spawn "firefox"; }
     Mod+Backspace hotkey-overlay-title="Power menu" { spawn "wlogout"; }
     Mod+S hotkey-overlay-title="Audio control" { spawn "alacritty" "-e" "alsamixer"; }
     Mod+A hotkey-overlay-title="Application launcher" { spawn "rofi" "-show" "drun" "-display-drun" ""; }
