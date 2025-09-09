@@ -84,6 +84,11 @@
   :ensure t)
 (setq x-select-enable-clipboard nil)
 
+(use-package evil-commentary
+  :ensure t
+  :config
+  (evil-commentary-mode))
+
 (use-package consult
   ;; Replace bindings. Lazily loaded by `use-package'.
   :bind (;; C-c bindings in `mode-specific-map'
@@ -238,12 +243,7 @@
  '(menu-bar-mode nil)
  '(org-agenda-files '("~/orgfiles"))
  '(org-export-backends '(ascii html icalendar latex md odt))
- '(package-selected-packages
-   '(autothemer colorful-mode company consult dashboard
-                eglot-inactive-regions evil evil-commentary flycheck
-                hl-todo lsp-pyright lsp-ui magit nerd-icons org-alert
-                pyvenv rainbow-mode sound-wav tree-sitter-langs
-                typescript-mode vertico yaml-mode))
+ '(package-selected-packages nil)
  '(tab-bar-show t)
  '(tab-width 4)
  '(tool-bar-mode nil))
