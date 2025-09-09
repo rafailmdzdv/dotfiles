@@ -207,6 +207,11 @@
   :config
   (org-alert-enable))
 
+(use-package yasnippet
+  :ensure t
+  :config
+  (yas-global-mode t))
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'rose-pine t)
 
