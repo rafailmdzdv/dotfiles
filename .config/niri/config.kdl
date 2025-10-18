@@ -17,6 +17,10 @@ output "HDMI-A-1" {
     mode "1920x1080@74.973000"
 }
 
+output "eDP-1" {
+    mode "1920x1080@60"
+}
+
 layout {
     background-color "transparent"
     gaps 12
@@ -141,7 +145,8 @@ binds {
     Mod+S hotkey-overlay-title="Audio control" { spawn "alacritty" "-e" "alsamixer"; }
     Mod+A hotkey-overlay-title="Application launcher" { spawn "rofi" "-show" "drun" "-display-drun" ""; }
     Mod+Alt+L hotkey-overlay-title="Lock screen" { spawn "swaylock"; }
-
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "set" "5%+"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+" "--limit" "1"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
@@ -296,8 +301,4 @@ environment {
 
 cursor {
   xcursor-theme "Adwaita"
-}
-
-debug {
-  wait-for-frame-completion-in-pipewire
 }

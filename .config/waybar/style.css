@@ -93,19 +93,14 @@ button:hover {
   margin-right: 0;
 }
 
-#battery {
-  background-color: #313244;
-}
-
 label:focus {
   background-color: #000000;
 }
 
+#battery,
+#pulseaudio,
+#memory,
 #cpu {
-  background-color: @surface;
-}
-
-#memory {
   background-color: @surface;
 }
 
@@ -119,6 +114,9 @@ label:focus {
 }
 
 #pulseaudio {
-  background-color: @surface;
   color: @foam;
+}
+
+#battery {
+  color: @gold;
 }

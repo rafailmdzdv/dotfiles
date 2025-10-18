@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "left",
-    "output": "HDMI-A-2",
+    "output": "eDP-1",
     "spacing": 0,
     "modules-left": [
         "niri/workspaces",
@@ -15,6 +15,8 @@
         "cpu",
         "memory",
         "pulseaudio",
+	"battery",
+	"network",
         "tray",
     ],
     "custom/logout": {
@@ -64,6 +66,14 @@
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "",
         "format-disconnected": "⚠",
+    },
+     "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}\n{capacity}",
+        "format-icons": ["", "", "", "", ""]
     },
     "custom/notification": {
         "tooltip": false,
