@@ -242,6 +242,7 @@ binds {
     }
     Mod+E hotkey-overlay-title="Emacs" { spawn "emacs"; }
     Mod+Shift+E hotkey-overlay-title="Files" { spawn "nautilus"; }
+    Mod+Shift+Backspace hotkey-overlay-title="Power menu" { spawn "wlogout"; }
     Mod+V hotkey-overlay-title="Clipboard Manager" { 
         spawn "dms" "ipc" "call" "clipboard" "toggle"; 
     }
