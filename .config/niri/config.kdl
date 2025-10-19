@@ -75,6 +75,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot_from_%Y-%m-%d_%H-%M-%S.png"
 workspace "code"
 workspace "browser"
 workspace "msg"
+workspace "orgmode"
 
 window-rule {
   match app-id="Rofi"
@@ -138,6 +139,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Shift+E hotkey-overlay-title="Emacs" { spawn "env" "DISPLAY=:1" "emacs"; }
+    Mod+O hotkey-overlay-title="Org files" { spawn "env" "DISPLAY=:1" "emacs" "~/orgfiles" "--no-splash"; }
     Mod+E hotkey-overlay-title="Files" { spawn "nautilus"; }
     Mod+T hotkey-overlay-title="Kitty" { spawn "kitty"; }
     Mod+W hotkey-overlay-title="Firefox" { spawn "firefox"; }
