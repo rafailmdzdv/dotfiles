@@ -58,6 +58,7 @@
     },
     "pulseaudio": {
         "format": "{icon}\n{volume}",
+        "format-muted": "",
         "format-icons": ["\uf026", "\uf027", "\uf028"],
         "scroll-step": 2,
     },
