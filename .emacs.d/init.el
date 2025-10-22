@@ -1,4 +1,5 @@
 (setq-default indent-tabs-mode nil)
+(setq org-hide-emphasis-markers t)
 
 (electric-pair-mode t)
 (global-set-key (kbd "C-c l") 'org-store-link)
@@ -248,7 +249,11 @@
  '(menu-bar-mode nil)
  '(org-agenda-files '("~/orgfiles"))
  '(org-export-backends '(ascii html icalendar latex md odt))
- '(package-selected-packages nil)
+ '(package-selected-packages
+   '(autothemer colorful-mode company consult dashboard evil-commentary
+                flycheck hl-todo lsp-pyright lsp-ui magit nerd-icons
+                org-alert pyvenv tree-sitter-langs typescript-mode
+                vertico yaml-mode yasnippet))
  '(tab-bar-show t)
  '(tab-width 4)
  '(tool-bar-mode nil))
