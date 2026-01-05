@@ -224,7 +224,7 @@ window-rule {
     opacity 0.9
 }
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"zen$"# title="^Picture-in-Picture$"
     match app-id="zoom"
     open-floating true
 }
@@ -240,7 +240,7 @@ binds {
     
     // === Application Launchers ===
     Mod+T hotkey-overlay-title="Kitty" { spawn "kitty"; }
-    Mod+W hotkey-overlay-title="Firefox" { spawn "firefox"; }
+    Mod+W hotkey-overlay-title="Zen Browser" { spawn "zen-browser"; }
     Mod+A hotkey-overlay-title="Application Launcher" { 
         spawn "dms" "ipc" "call" "spotlight" "toggle"; 
     }
