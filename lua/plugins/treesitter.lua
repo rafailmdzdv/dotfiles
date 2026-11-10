@@ -1,8 +1,9 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
+        branch = "master",
         build = ":TSUpdate",
-        init = function()
+        config = function()
             local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
             parser_config.org = {
                 install_info = {
@@ -26,6 +27,7 @@ return {
                     "rust",
                     "html",
                     "org",
+                    "go",
                 },
                 sync_install = false,
                 auto_install = true,

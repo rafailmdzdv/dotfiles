@@ -1,26 +1,43 @@
-local function on_attach(client, bufnr)
+local function setup_lsp_attach()
     local navic = require("nvim-navic")
-    vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
-    local map = vim.keymap.set
-    local normal = "n"
-    map(normal, "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
-    map(normal, "gd", "<cmd>Telescope lsp_definitions<CR>")
-    map(normal, "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
-    map(normal, "gi", "<cmd>Telescope lsp_implementations<CR>")
-    map(normal, "gr", "<cmd>Telescope lsp_references<CR>")
-    map(normal, "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
-    map(normal, "<leader>D", "<cmd>Telescope lsp_type_definitions<CR>")
-    map(normal, "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
-    map(normal, "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
-    map(normal, "<leader>lr", "<cmd>LspRestart<CR>")
-    map(normal, "<leader>d", "<cmd>lua vim.diagnostic.open_float()<CR>")
-    map(normal, "<leader>dn", "<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>")
-    map(normal, "<leader>dN", "<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>")
+    vim.api.nvim_create_autocmd("LspAttach", {
+        group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
+        callback = function(args)
+            local bufnr = args.buf
+            local client = vim.lsp.get_client_by_id(args.data.client_id)
+            if not client then
+                return
+            end
 
-    if client.server_capabilities.documentSymbolProvider then
-        navic.attach(client, bufnr)
-    end
+            vim.bo[bufnr].omnifunc = "v:lua.vim.lsp.omnifunc"
+
+            local map = vim.keymap.set
+            local opts = { buffer = bufnr }
+
+            map("n", "gD", vim.lsp.buf.declaration, opts)
+            map("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
+            map("n", "K", vim.lsp.buf.hover, opts)
+            map("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
+            map("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
+            map("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+            map("n", "<leader>D", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+            map("n", "<leader>rn", vim.lsp.buf.rename, opts)
+            map("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+            map("n", "<leader>lr", "<cmd>LspRestart<CR>", opts)
+            map("n", "<leader>d", vim.diagnostic.open_float, opts)
+            map("n", "<leader>dn", function()
+                vim.diagnostic.goto_next({ float = false })
+            end, opts)
+            map("n", "<leader>dN", function()
+                vim.diagnostic.goto_prev({ float = false })
+            end, opts)
+
+            if client:supports_method("textDocument/documentSymbol") or client.server_capabilities.documentSymbolProvider then
+                navic.attach(client, bufnr)
+            end
+        end,
+    })
 end
 
 return {
@@ -31,29 +48,56 @@ return {
             "SmiteshP/nvim-navic",
         },
         config = function()
-            local lspconfig = require("lspconfig")
-            local capabilities =
-                require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+            setup_lsp_attach()
+
+            local capabilities = vim.tbl_deep_extend(
+                "force",
+                vim.lsp.protocol.make_client_capabilities(),
+                require("cmp_nvim_lsp").default_capabilities()
+            )
+
             local lsprotocols = {
-                "pyright",
-                "rust_analyzer",
+                -- "pyright",
+                -- "rust_analyzer",
                 "tailwindcss",
                 "ts_ls",
-                "nixd",
                 "html",
                 "cssls",
-                "gopls",
             }
+
             for _, lsp in ipairs(lsprotocols) do
-                lspconfig[lsp].setup({
+                vim.lsp.config[lsp] = {
                     capabilities = capabilities,
-                    on_attach = on_attach,
-                })
+                }
+                vim.lsp.enable(lsp)
             end
 
-            lspconfig.lua_ls.setup({
+            local gopls_cmd = { "gopls" }
+            local user_gopls = vim.fn.expand("~/go/bin/gopls")
+            if vim.fn.executable(user_gopls) == 1 then
+                gopls_cmd = { user_gopls }
+            end
+
+            vim.lsp.config.gopls = {
+                cmd = gopls_cmd,
                 capabilities = capabilities,
-                on_attach = on_attach,
+                settings = {
+                    gopls = {
+                        analyses = {
+                            unusedparams = true,
+                            shadow = true,
+                        },
+                        staticcheck = true,
+                        gofumpt = true,
+                        completeUnimported = true,
+                        usePlaceholders = true,
+                    },
+                },
+            }
+            vim.lsp.enable("gopls")
+
+            vim.lsp.config.lua_ls = {
+                capabilities = capabilities,
                 settings = {
                     Lua = {
                         diagnostics = {
@@ -61,7 +105,8 @@ return {
                         },
                     },
                 },
-            })
+            }
+            vim.lsp.enable("lua_ls")
         end,
     },
 
@@ -76,13 +121,33 @@ return {
             "L3MON4D3/LuaSnip",
             "rafamadriz/friendly-snippets",
             "saadparwaiz1/cmp_luasnip",
+            "onsails/lspkind.nvim",
         },
         opts = function()
             local cmp = require("cmp")
+            local lspkind = require("lspkind")
             require("luasnip.loaders.from_vscode").lazy_load()
             local opts = {
+                formatting = {
+                    fields = { "kind", "abbr", "menu" },
+                    format = lspkind.cmp_format({
+                        mode = "symbol",
+                        maxwidth = 50,
+                        ellipsis_char = "...",
+                        before = function(entry, vim_item)
+                            local symbol = lspkind.symbolic(vim_item.kind)
+                            if symbol and symbol ~= "" then
+                                vim_item.kind = symbol
+                            end
+                            pcall(function()
+                                vim_item = require("tailwind-tools.cmp").lspkind_format(entry, vim_item)
+                            end)
+                            return vim_item
+                        end,
+                    }),
+                },
                 completion = {
-                    autocomplete = false,
+                    completeopt = "menu,menuone,noinsert",
                 },
                 snippet = {
                     expand = function(args)

@@ -25,6 +25,8 @@ require("lazy").setup({
 vim.api.nvim_create_autocmd("VimEnter", {
     group = vim.api.nvim_create_augroup("AutoUpdate", { clear = true }),
     callback = function()
-        require("lazy").update({ show = false })
+        if #vim.api.nvim_list_uis() > 0 then
+            require("lazy").update({ show = false })
+        end
     end,
 })
